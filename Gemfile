@@ -29,6 +29,7 @@ gem 'devise_invitable'
 gem 'auto_html'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
+gem 'simple_form'
 
 gem 'validates_email_format_of'
 
