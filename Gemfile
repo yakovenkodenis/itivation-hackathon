@@ -18,6 +18,7 @@ gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'title'
 
+gem 'globalize', '~> 5.0.0'
 
 gem 'puma'
 
@@ -42,5 +43,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rails-erd'
+  gem 'railroady'
 end
 
