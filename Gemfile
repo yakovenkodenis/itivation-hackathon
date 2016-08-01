@@ -16,6 +16,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass'
+gem 'bourbon'
 gem 'title'
 
 gem 'globalize', '~> 5.0.0'
