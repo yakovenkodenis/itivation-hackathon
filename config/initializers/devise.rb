@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'dd70504b9b4390950fd7d2c73f29135bb02179fc275c80414d67801466f867c03c128c1886ae49e1b088245333c3e093e6ba6c32e8569788f35c0345d89115de'
+  config.secret_key = 'dd70504b9b4390950fd7d2c73f29135bb02179fc275c80414d67801466f867c03c128c1886ae49e1b088245333c3e093e6ba6c32e8569788f35c0345d89115de'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -108,7 +108,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'c075dae575283e8b3d64fe483b7e280877ec47a8e23a38f399ccc2734456e35665e860aef8834e6129899b421e99c8ef327a408596a1432ca940fc9f8e76456d'
+  config.pepper = 'c075dae575283e8b3d64fe483b7e280877ec47a8e23a38f399ccc2734456e35665e860aef8834e6129899b421e99c8ef327a408596a1432ca940fc9f8e76456d'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -119,7 +119,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+  config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
@@ -127,7 +127,7 @@ Devise.setup do |config|
   # their account can't be confirmed with the token any more.
   # Default is nil, meaning there is no restriction on how long a user can take
   # before confirming their account.
-  # config.confirm_within = 3.days
+  config.confirm_within = 3.days
 
   # If true, requires any email changes to be confirmed (exactly the same way as
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
