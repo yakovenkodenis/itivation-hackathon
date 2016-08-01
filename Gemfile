@@ -15,7 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
-gem 'bootstrap-rails'
+gem 'bootstrap-sass'
 gem 'title'
 
 
