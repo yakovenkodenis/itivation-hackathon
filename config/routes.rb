@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   authenticated :teammate do
-    get 'team', to: 'teammates/team#index'
+    # get 'team', to: 'teammates/team#index'
+    resources :team, controller: 'teammates/team'
   end
 end

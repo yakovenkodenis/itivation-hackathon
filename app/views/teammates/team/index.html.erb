@@ -1,1 +1,12 @@
-Index stuff
+<% if @team %>
+    <div>Your team:</div>
+    <p><%= @team.name %></p>
+<% else %>
+    <div>Teams:</div>
+    <ul>
+        <% @teams.each do |team| %>
+            <li><%= team.name %></li>
+        <% end %>
+    </ul>
+    <%= link_to 'Create your own team', new_team_path %>
+<% end %>

@@ -59,7 +59,10 @@ ActiveRecord::Schema.define(version: 20160801135033) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "team_id"
   end
+
+  add_index "projects", ["team_id"], name: "index_projects_on_team_id", using: :btree
 
   create_table "teammates", force: :cascade do |t|
     t.string   "name"
@@ -67,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160801135033) do
     t.string   "city"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "team_id"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -88,19 +92,15 @@ ActiveRecord::Schema.define(version: 20160801135033) do
   add_index "teammates", ["confirmation_token"], name: "index_teammates_on_confirmation_token", unique: true, using: :btree
   add_index "teammates", ["email"], name: "index_teammates_on_email", unique: true, using: :btree
   add_index "teammates", ["reset_password_token"], name: "index_teammates_on_reset_password_token", unique: true, using: :btree
+  add_index "teammates", ["team_id"], name: "index_teammates_on_team_id", using: :btree
   add_index "teammates", ["unlock_token"], name: "index_teammates_on_unlock_token", unique: true, using: :btree
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "project_id"
-    t.integer  "teammate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "teams", ["project_id"], name: "index_teams_on_project_id", using: :btree
-  add_index "teams", ["teammate_id"], name: "index_teams_on_teammate_id", using: :btree
-
-  add_foreign_key "teams", "projects"
-  add_foreign_key "teams", "teammates"
+  add_foreign_key "projects", "teams"
+  add_foreign_key "teammates", "teams"
 end
