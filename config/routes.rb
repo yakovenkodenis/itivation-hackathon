@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   devise_for :mentors
   devise_for :teammates,
     controllers: {
-      registrations: 'teammates/registrations',
-      sessions: 'teammates/sessions'
+      registrations: 'teammates/registrations'
   }, path_names: {
       sign_in: 'login',
       sign_out: 'logout',
@@ -14,7 +13,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   authenticated :teammate do
-    # get 'team', to: 'teammates/team#index'
     resources :team, controller: 'teammates/team'
   end
 end

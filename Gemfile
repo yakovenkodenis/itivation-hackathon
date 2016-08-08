@@ -32,6 +32,8 @@ gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
 gem 'simple_form'
 
+gem 'delayed_job_active_record'
+
 gem 'validates_email_format_of'
 
 gem 'administrate', '~> 0.2.2'
@@ -40,6 +42,7 @@ gem 'administrate-field-image'
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :development do
