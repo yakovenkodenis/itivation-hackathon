@@ -1,3 +1,4 @@
+ruby '2.2.3'
 source 'https://rubygems.org'
 
 
@@ -54,4 +55,4 @@ group :development do
   gem 'railroady'
 end
 
-
+gem 'rails_12factor', group: :production
