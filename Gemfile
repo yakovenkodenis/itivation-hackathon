@@ -39,6 +39,8 @@ gem 'validates_email_format_of'
 gem 'administrate', '~> 0.2.2'
 gem 'administrate-field-image'
 
+gem 'toastr-rails'
+
 
 group :development, :test do
   gem 'byebug'
