@@ -5,10 +5,11 @@ class Teammates::InvitationsController < Devise::InvitationsController
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:accept_invitation) do |u|
-      u.permit(:name, :city, :email, :password,
-               :password_confirmation, :invitation_token)
-    end
+    devise_parameter_sanitizer.permit(
+      :accept_invitation,
+      keys: [:name, :city, :email, :password,
+             :password_confirmation, :invitation_token]
+    )
   end
 
   private
