@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :mentors
+    resources :teammates
+    resources :events
+    resources :projects
+    resources :teams
+
+    root to: "mentors#index"
+  end
+
   devise_for :mentors
 
   devise_for :teammates,
