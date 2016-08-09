@@ -13,7 +13,6 @@ class Teammate < ActiveRecord::Base
     puts notification
     puts *args
     puts 'SEND_DEVISE_NOTIFICATION END'
-    # devise_mailer.send(notification, self, *args)
     devise_mailer.send(notification, self, *args).deliver_later
   end
 end

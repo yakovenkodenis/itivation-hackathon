@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :mentors
+
   devise_for :teammates,
     controllers: {
-      registrations: 'teammates/registrations'
+      registrations: 'teammates/registrations',
+      invitations: 'teammates/invitations'
   }, path_names: {
       sign_in: 'login',
       sign_out: 'logout',

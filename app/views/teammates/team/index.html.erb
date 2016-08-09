@@ -1,6 +1,10 @@
 <% if @team %>
     <div>Your team:</div>
     <p><%= @team.name %></p>
+
+    <h3 class="extra-margin-top">Invite a teammate</h3>
+    <%= render 'invite_teammate_form' %>
+
 <% else %>
     <div>Teams:</div>
     <ul>
