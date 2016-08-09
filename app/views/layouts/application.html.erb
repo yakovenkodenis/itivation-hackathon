@@ -19,22 +19,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand topnav" href="#">Itivation.</a>
+            <!-- <a class="navbar-brand topnav" href="#">Itivation.</a> -->
+            <%= link_to 'Itivation.', root_path, class: 'navbar-brand topnav' %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#about">About</a>
+                    <%= link_to 'About', about_path %>
                 </li>
                 <li>
-                    <a href="#services">Teams</a>
+                    <%= link_to 'Teams', teams_path %>
                 </li>
                 <li>
-                    <a href="#services">Mentors</a>
+                    <%= link_to 'Mentors', mentors_path %>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <%= link_to 'Contact', contact_path %>
                 </li>
 
                 <% if teammate_signed_in? %>

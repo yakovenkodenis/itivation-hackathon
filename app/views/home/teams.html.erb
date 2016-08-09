@@ -1,0 +1,32 @@
+<div class="container" style="padding-top: 7%;">
+    <h2>Teams
+        <p class="lead">This is the list of all teams</p>
+        <hr><br>
+        <div class="agenda">
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th class='small-th'>Team</th>
+                            <th class='small-th'>Project</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @teams.each do |t| %>
+                            <tr class='smaller-td'>
+                                <td class="agenda-time">
+                                    <%= t.name %>
+                                </td>
+                                <td class="agenda-events">
+                                    <div class="agenda-event">
+                                        <%= t.projects.first.name + '. ' + t.projects.first.description %>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </h2>
+</div>

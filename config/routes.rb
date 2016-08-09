@@ -14,7 +14,13 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get '/teams', to: 'home#teams'
+  get '/about', to: 'home#about'
+  get '/mentors', to: 'home#mentors'
+  get '/contact', to: 'home#contact'
+
   authenticated :teammate do
     resources :team, controller: 'teammates/team'
+    resources :project, controller: 'teammates/projects'
   end
 end
