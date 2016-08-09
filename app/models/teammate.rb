@@ -9,10 +9,6 @@ class Teammate < ActiveRecord::Base
   acts_as_taggable_on :technologies
 
   def send_devise_notification(notification, *args)
-    puts 'SEND_DEVISE_NOTIFICATION'
-    puts notification
-    puts *args
-    puts 'SEND_DEVISE_NOTIFICATION END'
     devise_mailer.send(notification, self, *args).deliver_later
   end
 end

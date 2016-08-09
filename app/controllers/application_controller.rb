@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_in_path_for(resource)
+    '/team'
+  end
+
   def after_invite_path_for(resource)
     team_index_path
   end

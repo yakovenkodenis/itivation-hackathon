@@ -1,5 +1,5 @@
 <%= simple_form_for(Teammate.new, url: teammate_invitation_path,
                                   html: { class: 'form-inline' }) do |f| %>
     <%= f.input :email, placeholder: 'Email', label: false %>
-    <%= f.button :submit, 'Invite teammate', class: 'btn-primary' %>
+    <%= f.button :submit, 'Invite', class: 'btn-primary' %>
 <% end %>

@@ -1,16 +1,46 @@
-<% if @team %>
-    <div>Your team:</div>
-    <p><%= @team.name %></p>
+<div class="container" style="padding-top: 5%;">
+    <% if @team %>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Your team:</h3>
+                <h4><%= @team.name %></h4>
+            </div>
+            <div class="col-md-6">
+                <h3>Team members:</h3>
+                <ul>
+                    <% @team.teammates.each do |t| %>
+                        <% if t.name %>
+                            <li>
+                                <% list_item = t.name + ' - ' + t.email %>
+                                <% if current_teammate.email == t.email %>
+                                    <% list_item = '(You) ' + list_item %>
+                                <% end %>
+                                <%= list_item %>
+                            </li>
+                        <% else %>
+                            <li>Pending - <%= t.email %></li>
+                        <% end %>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
 
-    <h3 class="extra-margin-top">Invite a teammate</h3>
-    <%= render 'invite_teammate_form' %>
-
-<% else %>
-    <div>Teams:</div>
-    <ul>
-        <% @teams.each do |team| %>
-            <li><%= team.name %></li>
+        <% if @team.teammates.size < 3 %>
+            <h3 class="extra-margin-top">Invite a new team member:</h3>
+            <%= render 'invite_teammate_form' %>
+        <% else %>
+            <p>Your team is full.</p>
         <% end %>
-    </ul>
-    <%= link_to 'Create your own team', new_team_path %>
-<% end %>
+
+    <% elsif @teams and @teams.size > 0 %>
+        <div>Teams:</div>
+        <ul>
+            <% @teams.each do |team| %>
+                <li><%= team.name %></li>
+            <% end %>
+        </ul>
+        <%= link_to 'Create your own team', new_team_path %>
+    <% else %>
+        <%= link_to 'Create your own team', new_team_path %>
+    <% end %>
+</div>

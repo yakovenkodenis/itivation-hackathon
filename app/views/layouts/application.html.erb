@@ -60,7 +60,7 @@
     <% flash.each do |type, message| %>
         <% messages << message %>
     <% end %>
-    <%= notify('info', messages, 'bottom-left', '4000') %>
+    <%= notify('info', messages, 'bottom-right', '4000') %>
 
 <%= yield %>
 
