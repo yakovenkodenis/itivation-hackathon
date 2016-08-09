@@ -42,6 +42,8 @@ gem 'administrate-field-image'
 
 gem 'toastr-rails'
 
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
 
 group :development, :test do
   gem 'byebug'
