@@ -88,9 +88,9 @@ Rails.application.configure do
     tls: false,
     enable_starttls_auto: true,
     address: 'smtp.gmail.com',
-    domain: ENV['ACTION_MAILER_HOST'] || 'localhost',
+    domain: ENV['ACTION_MAILER_HOST'] || 'localhost:3000',
     port: 587,
-    user_name: ENV['ACTION_MAILER_USERNAME'] || 'yakovenko.denis.a@gmail.com',
+    user_name: ENV['ACTION_MAILER_USERNAME'],
     password: ENV['ACTION_MAILER_PASSWORD'],
     authentication: 'login'
   }

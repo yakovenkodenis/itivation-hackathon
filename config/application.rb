@@ -31,19 +31,21 @@ module Hackathon
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
+    config.action_mailer.raise_delivery_errors = true
     config.active_job.queue_adapter = :delayed_job
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
 
     config.action_mailer.smtp_settings = {
       openssl_verify_mode: 'none',
       tls: false,
       enable_starttls_auto: true,
       address: 'smtp.gmail.com',
-      domain: 'gmail.com',
+      domain: 'mail.google.com',
       port: 587,
-      user_name: ENV['ACTION_MAILER_USERNAME'] || 'yakovenko.denis.a@gmail.com',
+      user_name: ENV['ACTION_MAILER_USERNAME'],
       password: ENV['ACTION_MAILER_PASSWORD'],
-      authentication: :login
+      authentication: 'login'
     }
   end
 end
