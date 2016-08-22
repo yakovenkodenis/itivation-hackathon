@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        teammate:
+          attributes:
+            email:
+              blank: 'Это поле не может быть пустым'
+            password:
+              blank: 'Это поле не может быть пустым'
