@@ -1,0 +1,31 @@
+ru:
+  devise:
+    failure:
+      invited: "Вам отправлено приглашение, примите его, чтобы закончить создание аккаунта."
+    invitations:
+      send_instructions: "Приглашение было отправлено на адрес %{email}."
+      invitation_token_invalid: "Предоставленный токен приглащения недействителен!"
+      updated: "Ваш аккаунт был успешно обновлён. Теперь Вы авторизированы."
+      updated_not_active: "Ваш аккаунт был успешно обновлён."
+      no_invitations_remaining: "Приглашений не осталось."
+      invitation_removed: "Ваше приглашение было удалено."
+      new:
+        header: "Отправить приглашение"
+        submit_button: "Отправить приглашение"
+      edit:
+        header: "Создать Аккаунт"
+        submit_button: "Создать Аккаунт"
+    mailer:
+      invitation_instructions:
+        subject: "Приглашение в команду"
+        hello: "Привет, %{email}"
+        someone_invited_you: "Вас пригласили вступить в команду %{url}, Вы можете принять приглашение, перейдя по ссылке ниже."
+        accept: "Принять приглашение"
+        accept_until: "Это приглашение действительно до %{due_date}."
+        ignore: "Если вы не хотите принимать приглашение, пожалуйста, проигнорируйте это сообщение.<br />\nВаш аккаунт не будет создан, пока Вы не перейдёте по ссылке приглашения и не установите свой пароль."
+  time:
+    formats:
+      devise:
+        mailer:
+          invitation_instructions:
+            accept_until_format: "%B %d, %Y %I:%M %p"
