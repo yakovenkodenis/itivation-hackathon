@@ -17,6 +17,6 @@ class Teammates::RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_up_path_for(resource)
-    '/team'
+    team_index_path
   end
 end
