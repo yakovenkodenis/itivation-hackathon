@@ -9,7 +9,4 @@ class HomeController < ApplicationController
   def mentors
     @mentors = Mentor.all
   end
-
-  def about
-  end
 end

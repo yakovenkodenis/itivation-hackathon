@@ -8,6 +8,8 @@ class Teammate < ActiveRecord::Base
 
   acts_as_taggable_on :technologies
 
+  validates :name, :email, :city, presence: true
+
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
   end

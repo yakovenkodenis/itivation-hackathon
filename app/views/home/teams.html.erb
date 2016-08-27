@@ -9,6 +9,7 @@
                         <tr>
                             <th class='small-th'>Team</th>
                             <th class='small-th'>Project</th>
+                            <th class='small-th'>Link</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -18,9 +19,24 @@
                                     <%= t.name %>
                                 </td>
                                 <td class="agenda-events">
-                                    <div class="agenda-event">
-                                        <%= t.projects.first.name + '. ' + t.projects.first.description %>
-                                    </div>
+                                    <% if t.projects.first %>
+                                        <div class="agenda-event">
+                                            <h1><%= t.projects.first.name %></h1>
+                                            <br>
+                                            <%= markdown(t.projects.first.description) %>
+                                        </div>
+                                    <% else %>
+                                        <span> - </span>
+                                    <% end %>
+                                </td>
+                                <td>
+                                    <% if t.projects.first %>
+                                    <a href="<%= t.projects.first.link %>">
+                                        <%= t.projects.first.link %>
+                                    </a>
+                                    <% else %>
+                                        <span> - </span>
+                                    <% end %>
                                 </td>
                             </tr>
                         <% end %>

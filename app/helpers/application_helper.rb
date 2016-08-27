@@ -42,4 +42,15 @@ module ApplicationHelper
     aval_locales_but_current.map{ |l| yield(l) }.join.html_safe
   end
 
+  def markdown(text)
+    markdown_parser = Redcarpet::Markdown.new(
+      Redcarpet::Render::HTML,
+      hard_wrap: true, autolink: true,
+      quote: true, fenced_code_blocks: true,
+      strikethrough: true, tables: true,
+      space_after_headers: true, superscript: true,
+      underline: true, highlight: true, footnotes: true
+    )
+    markdown_parser.render(text).html_safe
+  end
 end

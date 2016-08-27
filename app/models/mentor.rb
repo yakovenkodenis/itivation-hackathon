@@ -4,4 +4,6 @@ class Mentor < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
+
+  validates :name, :city, :email, presence: true
 end

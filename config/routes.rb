@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
-    get '(:locale)', to: 'home#index'
+  get '(:locale)', to: 'home#index'
+
+  namespace :admin do
+    resources :mentors
+    resources :teammates
+    resources :events
+    resources :projects
+    resources :teams
+
+    root to: 'mentors#index'
+  end
 
   scope '(:locale)', locale: /en|ru/ do
 
@@ -19,7 +29,6 @@ Rails.application.routes.draw do
     root 'home#index'
 
     get '/teams', to: 'home#teams'
-    get '/about', to: 'home#about'
     get '/mentors', to: 'home#mentors'
     get '/contact', to: 'home#contact'
 
@@ -27,15 +36,5 @@ Rails.application.routes.draw do
       resources :team, controller: 'teammates/team'
       resources :project, controller: 'teammates/projects'
     end
-  end
-
-  namespace :admin do
-    resources :mentors
-    resources :teammates
-    resources :events
-    resources :projects
-    resources :teams
-
-    root to: 'mentors#index'
   end
 end
