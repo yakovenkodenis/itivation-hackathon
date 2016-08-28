@@ -1,4 +1,10 @@
 ru:
+  landing:
+    sign_up_button: 'Принять участие'
+    title:
+      main_title: 'Хакатон Itivation'
+    countdown:
+      time_left: 'До начала осталось'
   activerecord:
     errors:
       models:

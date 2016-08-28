@@ -1,0 +1,37 @@
+.countdown-timer {
+
+    &#wrapper {
+        text-align: center;
+        padding: 50px 0;
+        min-height: 650px;
+        width: 100%;
+        -webkit-background-size: 100%;
+             -o-background-size: 100%;
+                background-size: 100%;
+
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+
+        h1 {
+            margin-top: 60px;
+            margin-bottom: 40px;
+            color: #FFF;
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        h2.subtitle {
+            color: #FFF;
+            font-size: 24px;
+        }
+    }
+
+    #countdown {
+        font-size: 48px;
+        color: #FFF;
+        line-height: 1.1em;
+        margin: 40px 0 60px;
+    }
+}

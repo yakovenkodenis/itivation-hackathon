@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  landing:
+    sign_up_button: 'Participate'
+    title:
+      main_title: 'Itivation Hackathon'
+    countdown:
+      time_left: "Time left"

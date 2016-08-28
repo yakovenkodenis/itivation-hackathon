@@ -8,11 +8,29 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Itivation Hackathon</h1>
-                        <h3>Whatever.</h3>
+                        <h1><%= t('landing.title.main_title') %></h1>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptas, aspernatur! Voluptatum dolores nulla adipisci, debitis aliquid sit repudiandae dolore omnis optio ducimus esse natus?</h3>
                         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
+
+                        <!-- countdown -->
+                        <div id="wrapper" class="countdown-timer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 countdown-block">
+                                        <h1><%= t('landing.countdown.time_left') %>:</h1>
+                                        <!-- <h2 id="subtitle"></h2> -->
+                                        <div id="countdown" data-locale="<%= I18n.locale %>"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- countdown end -->
+
+                        <ul class="list-inline intro-social-buttons landing-first-block-links-ul">
                             <li>
+                                <%= link_to I18n.t('landing.sign_up_button'),new_teammate_registration_path , { class: 'btn btn-default btn-lg' } %>
+                            </li>
+<!--                             <li>
                                 <a href="https://twitter.com/" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
@@ -20,7 +38,7 @@
                             </li>
                             <li>
                                 <a href="https://linkedin.com/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
