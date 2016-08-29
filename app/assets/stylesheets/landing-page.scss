@@ -64,6 +64,14 @@ h6 {
 
     .countdown-block {
         margin-top: -8%;
+        height: 0;
+    }
+
+    .mentors-carousel-header {
+        ul {
+            display: inline-block;
+            float: right;
+        }
     }
 
     @media(max-width:767px) {

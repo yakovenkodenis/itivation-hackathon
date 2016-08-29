@@ -1,11 +1,6 @@
- hello = null;
  $(document).ready(function() {
   var weeks, days, text_weeks, text_days;
   $('#countdown').countdown('2016/11/05', function(event) {
-    if (!hello) {
-      hello = event;
-      console.log(hello);
-    }
     var locale = $(this).data('locale');
     if (locale === 'en') {
       $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
