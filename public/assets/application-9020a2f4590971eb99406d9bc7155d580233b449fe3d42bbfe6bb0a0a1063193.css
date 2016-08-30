@@ -12456,111 +12456,126 @@ h6 {
 .landing-page-namespace .intro-message > h3 {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+/* line 60, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+.landing-page-namespace .landing-first-block-links-ul {
+  margin-top: -35%;
+  margin-bottom: -10%;
+}
+/* line 65, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+.landing-page-namespace .countdown-block {
+  margin-top: -8%;
+  height: 0;
+}
+/* line 71, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+.landing-page-namespace .mentors-carousel-header ul {
+  display: inline-block;
+  float: right;
+}
 @media (max-width: 767px) {
-  /* line 61, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 78, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace .intro-message {
     padding-bottom: 15%;
   }
-  /* line 65, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 82, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace .intro-message > h1 {
     font-size: 3em;
   }
-  /* line 69, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 86, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace ul.intro-social-buttons > li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 75, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 92, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace ul.intro-social-buttons > li:last-child {
     margin-bottom: 0;
   }
-  /* line 79, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 96, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace .intro-divider {
     width: 100%;
   }
 }
-/* line 84, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 101, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .network-name {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2px;
 }
-/* line 91, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 108, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .content-section-a {
   padding: 50px 0;
   background-color: #f8f8f8;
 }
-/* line 96, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 113, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .content-section-b {
   padding: 50px 0;
   border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
 }
-/* line 102, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 119, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .section-heading {
   margin-bottom: 30px;
 }
-/* line 106, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 123, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .section-heading-spacer {
   float: left;
   width: 200px;
   border-top: 3px solid #e7e7e7;
 }
-/* line 112, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 129, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .banner {
   padding: 100px 0;
   color: #f8f8f8;
   background: url(banner-bg.jpg) no-repeat center center;
   background-size: cover;
 }
-/* line 119, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 136, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .banner h2 {
   margin: 0;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   font-size: 3em;
 }
-/* line 125, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 142, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .banner ul {
   margin-bottom: 0;
 }
-/* line 129, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 146, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace .banner-social-buttons {
   float: right;
   margin-top: 0;
 }
 @media (max-width: 1199px) {
-  /* line 135, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 152, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace ul.banner-social-buttons {
     float: left;
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 142, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 159, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace .banner h2 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 3em;
   }
-  /* line 148, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 165, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace ul.banner-social-buttons > li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 154, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+  /* line 171, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
   .landing-page-namespace ul.banner-social-buttons > li:last-child {
     margin-bottom: 0;
   }
 }
-/* line 159, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 176, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace footer {
   padding: 50px 0;
   background-color: #f8f8f8;
 }
-/* line 164, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
+/* line 181, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/landing-page.scss */
 .landing-page-namespace p.copyright {
   margin: 15px 0 0;
 }
@@ -12581,4 +12596,35 @@ h6 {
 .agenda .smaller-td {
   font-size: 80%;
   font-weight: 300;
+}
+
+/* line 3, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/countdown.scss */
+.countdown-timer#wrapper {
+  text-align: center;
+  padding: 50px 0;
+  min-height: 650px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+/* line 16, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/countdown.scss */
+.countdown-timer#wrapper h1 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #FFF;
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+/* line 25, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/countdown.scss */
+.countdown-timer#wrapper h2.subtitle {
+  color: #FFF;
+  font-size: 24px;
+}
+/* line 31, /home/denis/WEB/Rails/hackathon/app/assets/stylesheets/countdown.scss */
+.countdown-timer #countdown {
+  font-size: 48px;
+  color: #FFF;
+  line-height: 1.1em;
+  margin: 40px 0 60px;
 }
