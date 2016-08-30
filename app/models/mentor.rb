@@ -5,5 +5,5 @@ class Mentor < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
 
-  validates :name, :city, :email, presence: true
+  validates :name, :email, :organization, presence: true
 end
