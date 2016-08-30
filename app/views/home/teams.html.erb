@@ -74,7 +74,7 @@
                                 </td> -->
 
                                 <td>
-                                    <% if t.projects.first %>
+                                    <% if t.projects.first && t.projects.first.link %>
                                     <a href="<%= t.projects.first.link %>">
                                         <%= t.projects.first.link %>
                                     </a>
