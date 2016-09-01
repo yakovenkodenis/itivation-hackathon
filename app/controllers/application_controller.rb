@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   before_filter :set_locale
 
-  rescue_from ActiveRecord::RecordNotFound, with: :not_found
-  rescue_from Exception, with: :not_found
-  rescue_from ActionController::RoutingError, with: :not_found
+  # rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  # rescue_from Exception, with: :not_found
+  # rescue_from ActionController::RoutingError, with: :not_found
 
   protect_from_forgery with: :exception
 
@@ -20,23 +20,23 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
-  protected
+  # protected
 
-  def raise_not_found
-    raise ActionController::RoutingError.new("No route matches #{params[:unmatched_route]}")
-  end
+  # def raise_not_found
+  #   raise ActionController::RoutingError.new("No route matches #{params[:unmatched_route]}")
+  # end
 
-  def not_found
-    respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Wrong url' }
-    end
-  end
+  # def not_found
+  #   respond_to do |format|
+  #     format.html { redirect_to root_path, notice: 'Wrong url' }
+  #   end
+  # end
 
-  def error
-    respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Wrong url' }
-    end
-  end
+  # def error
+  #   respond_to do |format|
+  #     format.html { redirect_to root_path, notice: 'Wrong url' }
+  #   end
+  # end
 
   private
 
