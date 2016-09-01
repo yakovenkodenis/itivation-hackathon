@@ -40,6 +40,10 @@ module Hackathon
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.perform_deliveries = true
 
+    config.action_mailer.default_options = {
+      from: ENV['ACTION_MAILER_USERNAME']
+    }
+
     config.action_mailer.smtp_settings = {
       openssl_verify_mode: 'none',
       tls: false,
