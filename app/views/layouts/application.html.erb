@@ -54,6 +54,14 @@
                     <% end %>
                 </li>
                 <% end %>
+
+                <li style='padding-top: 2.5%; padding-left: 5px;'>
+                    <% if teammate_signed_in? %>
+                        <%= link_to team_index_path, { class: 'no-padding' } do %>
+                            <%= image_tag current_teammate.avatar.url(:thumb), class: 'img-small-round' %>
+                        <% end %>
+                    <% end %>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

@@ -6,3 +6,15 @@
 @import './landing-page';
 @import './teams_list';
 @import './countdown';
+
+
+.img-small-round {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+            border-radius: 15px;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
