@@ -39,5 +39,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '*path': redirect('/') unless Rails.env.development?
+  constraints(lambda { |req| Rails.env.production? }) do
+    get '*path', to: redirect('/')
+  end
 end
