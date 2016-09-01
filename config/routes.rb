@@ -39,7 +39,5 @@ Rails.application.routes.draw do
     end
   end
 
-  constraints(lambda { |req| Rails.env.production? }) do
-    get '(:locale)*path', to: redirect('/')
-  end
+  get '*unmatched_route', to: 'application#raise_not_found'
 end
