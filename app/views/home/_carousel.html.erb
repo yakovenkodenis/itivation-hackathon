@@ -3,7 +3,7 @@
         <div class="mentors-carousel-header">
             <h2 style='float: left;'>Our Mentors</h2>
             <li style='list-style: none; margin-top: 1%;'>
-                <%= link_to I18n.t('landing.mentor_sign_up_button'),new_mentor_registration_path , { class: 'btn btn-default btn-lg', style: 'float: right;' } %>
+                <%= link_to I18n.t('landing.mentor_sign_up_button'), mentors_path , { class: 'btn btn-default btn-lg', style: 'float: right;' } %>
             </li>
         </div>
         <div class="row">
@@ -14,7 +14,12 @@
                         <div class="carousel slide" id="myCarousel">
                             <!-- Carousel items -->
                             <div class="carousel-inner">
-                                <div class="active item" data-slide-number="0">
+                                <% mentors.each_with_index do |mentor, index|  %>
+                                    <div class="<%= index == 0 ? 'active' : '' %> item" data-slide-number="<%= index %>">
+                                        <%= image_tag mentor.avatar.url %>
+                                    </div>
+                                <% end %>
+<!--                                 <div class="active item" data-slide-number="0">
                                 <img src="http://placehold.it/770x300&amp;text=one"></div>
 
                                 <div class="item" data-slide-number="1">
@@ -30,7 +35,7 @@
                                 <img src="http://placehold.it/770x300&amp;text=five"></div>
 
                                 <div class="item" data-slide-number="5">
-                                <img src="http://placehold.it/770x300&amp;text=six"></div>
+                                <img src="http://placehold.it/770x300&amp;text=six"></div> -->
                             </div><!-- Carousel nav -->
                             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -44,7 +49,14 @@
                     <div class="col-sm-4" id="carousel-text"></div>
 
                     <div id="slide-content" style="display: none;">
-                        <div id="slide-content-0">
+                        <% mentors.each_with_index do |mentor, index| %>
+                            <div id="slide-content-<%= index %>">
+                                <h2><%= mentor.name %></h2>
+                                <p><%= mentor.description %></p>
+                                <p class="sub-text"><%= mentor.organization %>, <%= mentor.city %></p>
+                            </div>
+                        <% end %>
+<!--                         <div id="slide-content-0">
                             <h2>Mentor One</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ut sequi voluptates odit, soluta ex.</p>
                             <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
@@ -78,7 +90,7 @@
                             <h2>Mentor Six</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut fugiat ea sint accusamus laboriosam!</p>
                             <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -87,7 +99,14 @@
         <div class="row hidden-xs" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets carousel-thumbnails-list" style="list-style-type: none; margin-top: 20px;">
-                    <li class="col-sm-2">
+                    <% mentors.each_with_index do |mentor, index| %>
+                        <li class="col-sm-2">
+                            <a class="thumbnail" id="carousel-selector-<%= index %>">
+                                <%= image_tag mentor.avatar.url %>
+                            </a>
+                        </li>
+                    <% end %>
+<!--                     <li class="col-sm-2">
                         <a class="thumbnail" id="carousel-selector-0"><img src="http://placehold.it/170x100&amp;text=one"></a>
                     </li>
 
@@ -109,7 +128,7 @@
 
                     <li class="col-sm-2">
                         <a class="thumbnail" id="carousel-selector-5"><img src="http://placehold.it/170x100&amp;text=six"></a>
-                    </li>
+                    </li> -->
                 </ul>
         </div>
 </div>
