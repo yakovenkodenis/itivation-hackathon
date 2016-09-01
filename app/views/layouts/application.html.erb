@@ -28,7 +28,7 @@
                 <li>
                     <%= link_to 'Teams', teams_path %>
                 </li>
-                <% if @mentors_count == 0 || !current_teammate || !current_mentor %>
+                <% if @mentors_count == 0 || (!current_teammate && !current_mentor) %>
                     <li>
                         <%= link_to 'Mentors', mentors_path %>
                     </li>
