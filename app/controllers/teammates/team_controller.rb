@@ -1,4 +1,6 @@
 class Teammates::TeamController < ApplicationController
+  before_filter :set_project, only: [:show, :edit, :update, :destroy]
+
   def index
     @teams = Team.all
     @team = current_teammate.team
@@ -35,9 +37,15 @@ class Teammates::TeamController < ApplicationController
     end
   end
 
+  protected
+
+  def set_project
+    @team = Team.find(params[:id])
+  end
+
   private
 
   def team_params
-    params.require(:team).permit(:id, :name)
+    params.require(:team).permit(:name)
   end
 end
