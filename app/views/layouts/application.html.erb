@@ -45,6 +45,7 @@
                     <% end %>
                 </li>
 
+                <% if @allow_explicit_locales %>
                 <li>
                     <% if I18n.locale != I18n.default_locale %>
                         <%= link_to 'English', url_for(locale: 'en') %>
@@ -52,6 +53,7 @@
                         <%= link_to 'Русский', url_for(locale: 'ru') %>
                     <% end %>
                 </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

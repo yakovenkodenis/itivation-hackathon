@@ -34,8 +34,8 @@ Rails.application.routes.draw do
 
     authenticated :teammate do
       get '/', to: 'teammates/team#index'
+      resources :projects, controller: 'teammates/projects'
       resources :team, controller: 'teammates/team'
-      resources :project, controller: 'teammates/projects'
     end
   end
 end

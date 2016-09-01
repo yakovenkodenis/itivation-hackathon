@@ -1,11 +1,19 @@
 <div class="container" style="padding-top: 5%;">
     <%= image_tag current_teammate.avatar.url %>
     <ul class="nav navbar-nav navbar-right">
-        <li>
-            <% if teammate_signed_in? %>
-                <%= link_to 'Logout', destroy_teammate_session_path, method: :delete %>
+        <% if teammate_signed_in? %>
+            <li>
+                <%= link_to 'Edit Profile', edit_teammate_registration_path %>
+            </li>
+            <% if @team && @team.projects.first %>
+                <li>
+                    <%= link_to 'Edit Project', edit_project_path(@team.projects.first.id) %>
+                </li>
             <% end %>
-        </li>
+            <li>
+                <%= link_to 'Logout', destroy_teammate_session_path, method: :delete %>
+            </li>
+        <% end %>
     </ul>
     <% if @team %>
         <div class="row-off">

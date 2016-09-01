@@ -1,4 +1,6 @@
 class Teammates::ProjectsController < ApplicationController
+  before_filter :set_project, only: [:show, :edit, :update, :destroy]
+
   def index
     @projects = Project.all
     @project = current_teammate.team.projects.first
@@ -22,9 +24,28 @@ class Teammates::ProjectsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @project.update(project_params)
+        format.html { redirect_to team_index_path, notice: 'Project info updated' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  protected
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:name, :description)
+    params.require(:project).permit(:name, :link, :description)
   end
 end

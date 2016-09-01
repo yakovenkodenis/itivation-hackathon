@@ -22,6 +22,19 @@ class Teammates::TeamController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @team.update(team_params)
+        format.html { redirect_to team_index_path, notice: 'Team info updated' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   private
 
   def team_params
