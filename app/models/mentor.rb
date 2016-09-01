@@ -12,5 +12,5 @@ class Mentor < ActiveRecord::Base
 
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  validates :name, :email, :organization, presence: true
+  validates :name, :email, :organization, :city, presence: true
 end

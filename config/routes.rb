@@ -24,7 +24,14 @@ Rails.application.routes.draw do
         sign_up: 'signup'
     }
 
-    devise_for :mentors
+    devise_for :mentors,
+      controllers: {
+        registrations: 'mentors/registrations'
+    }, path_names: {
+        sign_in: 'login',
+        sign_out: 'logout',
+        sign_up: 'signup'
+    }
 
     root 'home#index'
 
