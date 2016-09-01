@@ -40,6 +40,6 @@ Rails.application.routes.draw do
   end
 
   constraints(lambda { |req| Rails.env.production? }) do
-    get '*path', to: redirect('/')
+    get '*path', to: redirect('/(:locale)')
   end
 end
