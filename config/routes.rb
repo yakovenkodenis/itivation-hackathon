@@ -38,4 +38,6 @@ Rails.application.routes.draw do
       resources :team, controller: 'teammates/team'
     end
   end
+
+  get '*path': redirect('/') unless Rails.env.development?
 end
