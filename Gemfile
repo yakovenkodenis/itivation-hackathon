@@ -32,6 +32,11 @@ gem 'auto_html', '~> 1.6'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
 gem 'simple_form'
+gem 'dotenv-rails'
+
+gem 'paperclip', '~> 5.0.0'
+gem 'paperclip-i18n'
+gem 'aws-sdk', '~> 2.3.0'
 
 gem 'delayed_job_active_record'
 

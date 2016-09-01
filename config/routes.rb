@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     get '/contact', to: 'home#contact'
 
     authenticated :teammate do
+      get '/', to: 'teammates/team#index'
       resources :team, controller: 'teammates/team'
       resources :project, controller: 'teammates/projects'
     end

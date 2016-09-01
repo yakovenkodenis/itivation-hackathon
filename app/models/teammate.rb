@@ -6,6 +6,13 @@ class Teammate < ActiveRecord::Base
          :confirmable, :lockable
   belongs_to :team
 
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
+                     default_url: "/images/:style/missing.png",
+                     url: '/system/:hash.:extension',
+                     hash_secret: ENV['PAPERCLIP_HASH_SECRET']
+
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   acts_as_taggable_on :technologies
 
   validates :name, :email, :city, presence: true

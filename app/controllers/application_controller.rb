@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  def index
+  end
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

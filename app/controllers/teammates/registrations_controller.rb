@@ -6,13 +6,13 @@ class Teammates::RegistrationsController < Devise::RegistrationsController
 
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(
-      :sign_up, keys: [:name, :email, :password, :city]
+      :sign_up, keys: [:name, :email, :password, :city, :avatar]
     )
   end
 
   def configure_account_update_params
     devise_parameter_sanitizer.permit(
-      :account_update, keys: [:name, :email, :password, :city]
+      :account_update, keys: [:name, :email, :password, :city, :avatar]
     )
   end
 

@@ -28,16 +28,18 @@
                 <li>
                     <%= link_to 'Teams', teams_path %>
                 </li>
-                <li>
-                    <%= link_to 'Mentors', mentors_path %>
-                </li>
+                <% if @mentors_count == 0 || !current_teammate || !current_mentor %>
+                    <li>
+                        <%= link_to 'Mentors', mentors_path %>
+                    </li>
+                <% end %>
                 <li>
                     <%= link_to 'Contact', contact_path %>
                 </li>
 
                 <li>
                     <% if teammate_signed_in? %>
-                        <%= link_to 'Logout', destroy_teammate_session_path, method: :delete %>
+                        <%= link_to 'My Team', team_index_path %>
                     <% else %>
                         <%= link_to 'Login', new_teammate_session_path %>
                     <% end %>

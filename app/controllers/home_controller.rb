@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    @mentors = Mentor.all
+    @mentors_count = @mentors.size
   end
 
   def teams

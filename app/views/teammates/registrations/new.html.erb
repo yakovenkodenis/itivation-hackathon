@@ -13,6 +13,8 @@
         <br>
         <%= f.input :city, required: true, label: false, placeholder: "City", input_html: {class: "form-control"} %>
         <br>
+        <%= f.input :avatar, as: :file, input_html: {class: "form-control"} %>
+        <br>
         <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), label: false, placeholder: "Password", input_html: {class: "form-control"} %>
         <br>
         <%= f.input :password_confirmation, required: true, label: false, placeholder: "Password Confirmation", input_html: {class: "form-control"} %>

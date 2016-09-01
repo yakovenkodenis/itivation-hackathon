@@ -1,4 +1,12 @@
+<%= image_tag current_teammate.avatar.url %>
 <div class="container" style="padding-top: 5%;">
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <% if teammate_signed_in? %>
+                <%= link_to 'Logout', destroy_teammate_session_path, method: :delete %>
+            <% end %>
+        </li>
+    </ul>
     <% if @team %>
         <div class="row-off">
             <div class="col-md-6">
