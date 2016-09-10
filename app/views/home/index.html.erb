@@ -59,7 +59,7 @@
 
             <div class="container">
                 <!-- <div class="row"> -->
-                    <%= render partial: 'carousel', locals: { mentors: @mentors } %>
+                    <%= render partial: 'carousel_stub', locals: { mentors: @mentors } %>
     <!--                 <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
@@ -78,12 +78,13 @@
     <% end %>
     <!-- /.content-section-a -->
 
-<!--     <div class="content-section-b">
+    <div class="content-section-b">
 
-        <div class="container">
+        <div class="container sponsors-slider">
 
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+            <!-- <div class="row"> -->
+                <%= render partial: 'sponsors_slider' %>
+<!--                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
@@ -91,13 +92,13 @@
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="<%= image_path('dog.png') %>" alt="">
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
 
-        </div> -->
+        </div>
         <!-- /.container -->
 
-    <!-- </div> -->
+    </div>
     <!-- /.content-section-b -->
 
 <!--     <div class="content-section-a">
