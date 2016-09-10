@@ -3,7 +3,8 @@ class Mentor < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :lockable
+         :lockable
+         # :confirmable
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
                      default_url: "/images/:style/missing.png",
