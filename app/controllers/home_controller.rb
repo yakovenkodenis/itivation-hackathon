@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :authorize_admin, only: :approvals
 
   helper_method :resource_name, :resource, :devise_mapping
 
@@ -14,6 +15,14 @@ class HomeController < ApplicationController
 
   def mentors
     @mentors = Mentor.all
+  end
+
+  def approvals
+    if params[:approved] == "false"
+      @mentors = Mentor.where(approved: false)
+    else
+      @mentors = Mentor.all
+    end
   end
 
   def resource_name
@@ -35,5 +44,9 @@ class HomeController < ApplicationController
       :sign_up, keys: [:name, :email, :password, :city,
                        :avatar, :description, :organization]
     )
+  end
+
+  def authorize_admin
+    redirect_to :back, status: 401 unless current_teammate.admin
   end
 end

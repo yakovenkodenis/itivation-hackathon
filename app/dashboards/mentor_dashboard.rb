@@ -38,6 +38,12 @@ class MentorDashboard < Administrate::BaseDashboard
     invitation_accepted_at: Field::DateTime,
     invitation_limit: Field::Number,
     invitations_count: Field::Number,
+    avatar_file_name: Field::String,
+    avatar_content_type: Field::String,
+    avatar_file_size: Field::Number,
+    avatar_updated_at: Field::DateTime,
+    city: Field::String,
+    approved: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -85,6 +91,12 @@ class MentorDashboard < Administrate::BaseDashboard
     :invitation_accepted_at,
     :invitation_limit,
     :invitations_count,
+    :avatar_file_name,
+    :avatar_content_type,
+    :avatar_file_size,
+    :avatar_updated_at,
+    :city,
+    :approved,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -118,6 +130,12 @@ class MentorDashboard < Administrate::BaseDashboard
     :invitation_accepted_at,
     :invitation_limit,
     :invitations_count,
+    :avatar_file_name,
+    :avatar_content_type,
+    :avatar_file_size,
+    :avatar_updated_at,
+    :city,
+    :approved,
   ].freeze
 
   # Overwrite this method to customize how mentors are displayed

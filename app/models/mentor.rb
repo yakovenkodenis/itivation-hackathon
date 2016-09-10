@@ -14,8 +14,20 @@ class Mentor < ActiveRecord::Base
 
   validates :name, :email, :organization, :city, presence: true
 
-  def send_devise_notification(notification, *args)
-    # devise_mailer.send(notification, self, *args).deliver_later
-    devise_mailer.send(notification, self, *args).deliver_now
+  # def send_devise_notification(notification, *args)
+  #   # devise_mailer.send(notification, self, *args).deliver_later
+  #   devise_mailer.send(notification, self, *args).deliver_now
+  # end
+
+  def active_for_authentication?
+    super && approved?
+  end
+
+  def inactive_message
+    if !approved?
+      :not_approved
+    else
+      super
+    end
   end
 end

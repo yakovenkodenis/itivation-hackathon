@@ -38,6 +38,7 @@ Rails.application.routes.draw do
     get '/teams', to: 'home#teams'
     get '/mentors', to: 'home#mentors'
     get '/contact', to: 'home#contact'
+    get '/approvals', to: 'home#approvals'
 
     authenticated :teammate do
       get '/', to: 'teammates/team#index'

@@ -44,9 +44,14 @@
                         <%= link_to 'Login', new_teammate_session_path %>
                     <% end %>
                 </li>
-                <% if teammate_signed_in? || mentor_signed_in? %>
+                <% if !teammate_signed_in? && !mentor_signed_in? %>
                     <li>
                         <%= link_to 'Sign Up', new_teammate_registration_path %>
+                    </li>
+                <% end %>
+                <% if teammate_signed_in? && current_teammate.admin %>
+                    <li>
+                        <%= link_to 'Approvals', approvals_path %>
                     </li>
                 <% end %>
 

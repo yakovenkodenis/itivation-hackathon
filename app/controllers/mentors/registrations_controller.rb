@@ -14,7 +14,8 @@ class Mentors::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     devise_parameter_sanitizer.permit(
       :sign_up, keys: [:name, :email, :password, :city,
-                       :avatar, :description, :organization]
+                       :avatar, :description, :organization,
+                       (:approved if current_teammate && current_teammate.admin)]
     )
   end
 

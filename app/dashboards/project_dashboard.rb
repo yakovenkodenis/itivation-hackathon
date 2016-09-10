@@ -14,6 +14,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    description_html: Field::Text,
+    link: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -37,6 +39,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     :description,
     :created_at,
     :updated_at,
+    :description_html,
+    :link,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -46,6 +50,8 @@ class ProjectDashboard < Administrate::BaseDashboard
     :team,
     :name,
     :description,
+    :description_html,
+    :link,
   ].freeze
 
   # Overwrite this method to customize how projects are displayed
