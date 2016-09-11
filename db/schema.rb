@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910174811) do
+ActiveRecord::Schema.define(version: 20160911111121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,6 +156,14 @@ ActiveRecord::Schema.define(version: 20160910174811) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.boolean  "admin",                  default: false
+    t.string   "phone_number"
+    t.string   "occupation"
+    t.string   "work_place"
+    t.string   "vk"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.string   "team_role"
+    t.string   "found_from"
   end
 
   add_index "teammates", ["confirmation_token"], name: "index_teammates_on_confirmation_token", unique: true, using: :btree

@@ -3,7 +3,8 @@ class Teammate < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :lockable
+         :lockable
+         # :confirmable
   belongs_to :team
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
@@ -17,8 +18,8 @@ class Teammate < ActiveRecord::Base
 
   validates :name, :email, :city, presence: true
 
-  def send_devise_notification(notification, *args)
-    # devise_mailer.send(notification, self, *args).deliver_later
-    devise_mailer.send(notification, self, *args).deliver_now
-  end
+  # def send_devise_notification(notification, *args)
+  #   # devise_mailer.send(notification, self, *args).deliver_later
+  #   devise_mailer.send(notification, self, *args).deliver_now
+  # end
 end

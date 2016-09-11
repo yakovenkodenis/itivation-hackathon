@@ -11,6 +11,8 @@
           <%= f.input :name, required: true %>
           <%= f.input :city, required: true %>
           <%= f.input :avatar, as: :file %>
+          <%= f.input :occupation, required: false, collection: ["Studying", "Working", "Studying & working", "Freelance"] %>
+          <%= f.input :team_role, required: true, collection: ["Designer", "Back-end dev", "Front-end dev", "Manager", "Other"] %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

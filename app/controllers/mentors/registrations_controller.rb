@@ -7,7 +7,8 @@ class Mentors::RegistrationsController < Devise::RegistrationsController
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(
       :sign_up, keys: [:name, :email, :password, :city,
-                       :avatar, :description, :organization]
+                       :avatar, :description, :organization,
+                       :approved]
     )
   end
 
