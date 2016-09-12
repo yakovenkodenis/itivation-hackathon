@@ -24,7 +24,25 @@ en:
   landing:
     sign_up_button: 'Participate'
     mentor_sign_up_button: 'Become a mentor'
+    join_the_race: 'Join the race'
     title:
       main_title: 'Itivation Hackathon'
     countdown:
       time_left: "Time left"
+    header:
+      teams: "Teams"
+      mentors: "Mentors"
+      contact: "Contact"
+      my_team: "My team"
+      approvals: "Approvals"
+      schedule: "Schedule"
+      login: "Login"
+      sign_up: "Sign up"
+    mentors_block:
+      block_name: "Our Mentors"
+    sponsors_block:
+      block_name: "Our Sponsors"
+    footer:
+      copyright: "All Rights Reserved"
+      home: "Home"
+

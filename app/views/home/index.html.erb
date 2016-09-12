@@ -130,7 +130,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Join the race:</h2>
+                    <h2><%= t('landing.join_the_race') %>:</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
@@ -157,22 +157,22 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <%= link_to 'Home', root_path %>
+                            <%= link_to t('landing.footer.home'), root_path %>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <%= link_to 'Teams', teams_path %>
+                            <%= link_to t('landing.header.teams'), teams_path %>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <%= link_to 'Mentors', mentors_path %>
+                            <%= link_to t('landing.header.mentors'), mentors_path %>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <%= link_to 'Contact', contact_path %>
+                            <%= link_to t('landing.header.contact'), contact_path %>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Itivation 2016. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; Itivation 2016. <%= t('landing.footer.copyright') %></p>
                 </div>
             </div>
         </div>

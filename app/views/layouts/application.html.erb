@@ -26,32 +26,32 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <%= link_to 'Teams', teams_path %>
+                    <%= link_to t('landing.header.teams'), teams_path %>
                 </li>
                 <% if @mentors_count == 0 || (!current_teammate && !current_mentor) %>
                     <li>
-                        <%= link_to 'Mentors', mentors_path %>
+                        <%= link_to t('landing.header.mentors'), mentors_path %>
                     </li>
                 <% end %>
                 <li>
-                    <%= link_to 'Contact', contact_path %>
+                    <%= link_to t('landing.header.contact'), contact_path %>
                 </li>
 
                 <li>
                     <% if teammate_signed_in? %>
-                        <%= link_to 'My Team', team_index_path %>
+                        <%= link_to t('landing.header.my_team'), team_index_path %>
                     <% else %>
-                        <%= link_to 'Login', new_teammate_session_path %>
+                        <%= link_to t('landing.header.login'), new_teammate_session_path %>
                     <% end %>
                 </li>
                 <% if !teammate_signed_in? && !mentor_signed_in? %>
                     <li>
-                        <%= link_to 'Sign Up', new_teammate_registration_path %>
+                        <%= link_to t('landing.header.sign_up'), new_teammate_registration_path %>
                     </li>
                 <% end %>
                 <% if teammate_signed_in? && current_teammate.admin %>
                     <li>
-                        <%= link_to 'Approvals', approvals_path %>
+                        <%= link_to t('landing.header.approvals'), approvals_path %>
                     </li>
                 <% end %>
 

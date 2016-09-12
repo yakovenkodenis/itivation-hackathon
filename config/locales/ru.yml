@@ -2,10 +2,27 @@ ru:
   landing:
     sign_up_button: 'Принять участие'
     mentor_sign_up_button: 'Cтать ментором'
+    join_the_race: 'Присоединяйся'
     title:
       main_title: 'Хакатон Itivation'
     countdown:
       time_left: 'До начала осталось'
+    header:
+      teams: "Команды"
+      mentors: "Менторы"
+      contact: "Контакты"
+      my_team: "Моя команда"
+      approvals: "Подтверждения"
+      schedule: "Расписание"
+      login: "Вход"
+      sign_up: "Регистрация"
+    mentors_block:
+      block_name: "Наши Менторы"
+    sponsors_block:
+      block_name: "Наши Спонсоры"
+    footer:
+      copyright: "Все права защищены"
+      home: "Главная"
   activerecord:
     errors:
       models:
