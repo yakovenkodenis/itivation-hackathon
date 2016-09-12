@@ -15,19 +15,19 @@
         <br>
         <%= f.input :avatar, as: :file, input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :phone_number, required: false, label: false, placeholder: "Phone number", input_html: {class: "form-control"} %>
+        <%= f.input :phone_number, required: true, label: false, placeholder: "Phone number", input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :occupation, required: false, label: "Occupation", placeholder: "Occupation", input_html: {class: "form-control"}, collection: ["Studying", "Working", "Studying & working", "Freelance"] %>
+        <%= f.input :occupation, required: true, label: "Occupation", placeholder: "Occupation", input_html: {class: "form-control"}, collection: ["Studying", "Working", "Studying & working", "Freelance"] %>
         <br>
         <%= f.input :work_place, required: false, label: false, placeholder: "Work/study place", input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :vk, required: false, label: false, placeholder: "VK link", input_html: {class: "form-control"} %>
+        <%= f.input :vk, required: true, label: false, placeholder: "VK link", input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :facebook, required: false, label: false, placeholder: "FB link", input_html: {class: "form-control"} %>
+        <%= f.input :facebook, required: true, label: false, placeholder: "FB link", input_html: {class: "form-control"} %>
         <br>
         <%= f.input :linkedin, required: false, label: false, placeholder: "LinkedIn link", input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :team_role, required: false, label: "Your role in team:", placeholder: "Your role in team", input_html: {class: "form-control"}, collection: ["Designer", "Back-end dev", "Front-end dev", "Manager", "Other"] %>
+        <%= f.input :team_role, required: true, label: "Your role in team:", placeholder: "Your role in team", input_html: {class: "form-control"}, collection: ["Designer", "Back-end dev", "Front-end dev", "Manager", "Other"] %>
         <br>
         <%= f.input :found_from, required: false, label: false, placeholder: "Where did you find out about the event?", input_html: {class: "form-control"} %>
         <br>
