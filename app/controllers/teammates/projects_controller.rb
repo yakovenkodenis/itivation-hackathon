@@ -17,7 +17,7 @@ class Teammates::ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         current_teammate.team.save!
-        format.html { redirect_to team_index_path, notice: 'Project was successfully created' }
+        format.html { redirect_to team_index_path, notice: I18n.t('tooltips.project_created') }
       else
         format.html { render :new }
       end
@@ -30,7 +30,7 @@ class Teammates::ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to team_index_path, notice: 'Project info updated' }
+        format.html { redirect_to team_index_path, notice: I18n.t('tooltips.project_updated') }
       else
         format.html { render :edit }
       end

@@ -1,19 +1,19 @@
 <div class="container" style="padding-top: 7%;">
-    <h1>Mentors</h1>
-    <%= link_to "All Mentors", action: "approvals" %>
+    <h1><%= t('home.approvals.mentors') %></h1>
+    <%= link_to t('home.approvals.all_mentors'), action: "approvals" %>
     <span> | </span>
-    <%= link_to "Mentors waiting approval", action: "approvals", approved: false %>
+    <%= link_to t('home.approvals.pending_mentors'), action: "approvals", approved: false %>
 
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <td>Name</td>
-                    <td>Email</td>
-                    <td>City</td>
-                    <td>Description</td>
-                    <td>Organization</td>
-                    <td>Approved</td>
+                    <td><%= t('home.approvals.table.name') %></td>
+                    <td><%= t('home.approvals.table.email') %></td>
+                    <td><%= t('home.approvals.table.city') %></td>
+                    <td><%= t('home.approvals.table.description') %></td>
+                    <td><%= t('home.approvals.table.organization') %></td>
+                    <td><%= t('home.approvals.table.approved') %></td>
                     <td></td>
                 </tr>
             </thead>
@@ -26,7 +26,7 @@
                         <td><%= mentor.description %></td>
                         <td><%= mentor.organization %></td>
                         <td><%= mentor.approved %></td>
-                        <td><%= link_to "Edit", edit_admin_mentor_path(mentor) %></td>
+                        <td><%= link_to t('home.approvals.table.edit'), edit_admin_mentor_path(mentor) %></td>
                     </tr>
                 <% end %>
             </tbody>

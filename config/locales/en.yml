@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  back: "Back"
   landing:
     sign_up_button: 'Participate'
     mentor_sign_up_button: 'Become a mentor'
@@ -45,4 +45,220 @@ en:
     footer:
       copyright: "All Rights Reserved"
       home: "Home"
+  authentication:
+    teammate:
+      login:
+        action: "Log In"
+        min_password_hint: "characters minimum"
+        placeholders:
+          email: "Email"
+          password: "Password"
+      sign_up:
+        action: "Sign Up"
+        placeholders:
+          name: "Name"
+          email: "Email"
+          city: "City"
+          avatar: "Avatar"
+          phone_number: "Phone number"
+          occupation: "Occupation"
+          work_study_place: "Work/study place"
+          vk_link: "VK link"
+          fb_link: "FB link"
+          linkedin_link: "LinkedIn link"
+          team_role: "Your role in team"
+          found_from: "Where did you find out about the event?"
+          password: "Password"
+          password_confirmation: "Password confirmation"
+        select:
+          occupation:
+            studying: "Studying"
+            working: "Working"
+            studying_and_working: "Studying & working"
+            freelance: "Freelance"
+          team_role:
+            designer: "Designer"
+            backend: "Back-end dev"
+            frontend: "Front-end dev"
+            manager: "Manager"
+            other: "Other"
+        edit:
+          action: "Edit profile"
+          current_password: "Current password"
+          leave_blank_hint: "Leave it blank if you don't want to change it"
+          current_password_hint: "We need your current password to confirm your changes"
+          update: "Update"
+          cancel_account: "Cancel my account"
+          unhappy: "Unhappy?"
+          cancel_confirm: "Are you sure?"
+          waiting_for_confirm: "Currently waiting confirmation for"
+      shared_links:
+        login: "Log in"
+        sign_up: "Sign up"
+        forgot_password: "Forgot your password?"
+        no_confirmation_instructions: "Didn't receive confirmation instructions?"
+        no_unlock_instructions: "Didn't receive unlick instructions?"
+        omniauth_sign_in: "Sign in with"
+      confirmations:
+        action: "Resend confirmation instructions"
+        placeholders:
+          email: "Email"
+      invitations:
+        edit:
+          action: "Create Account"
+      mailer:
+        confirmation:
+          action: "Confirm my account"
+          welcome: "Welcome"
+          you_can_confirm: "You can confirm your account email through the link below"
+        password_change:
+          hello: "Hello"
+          message: "We're contacting you to notify you that your password has been changed."
+        reset_password:
+          action: "Change my password"
+          hello: "Hello"
+          message: "Someone has requested a link to change your password. You can do this through the link below."
+          no_link_no_change: "Your password won't change until you access the link above and create a new one."
+          did_not_request: "If you didn't request this, please ignore this email"
+        unlock:
+          action: "Unlock my account"
+          hello: "Hello"
+          message: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+          link: "Click the link below to unlock your account"
+      passwords:
+        action: "Change your password"
+        new: "New password"
+        confirm: "Confirm your new password"
+        forgot: "Forgot your password?"
+        send_reset: "Send me reset password instructions"
+      unlocks:
+        action: "Resend unlock instructions"
+    mentor:
+      login:
+        action: "Log In"
+        min_password_hint: "characters minimum"
+        placeholders:
+          email: "Email"
+          password: "Password"
+      sign_up:
+        action: "Sign Up"
+        action2: "Sign up for mentorship"
+        placeholders:
+          name: "Name"
+          email: "Email"
+          city: "City"
+          avatar: "Avatar"
+          description: "Couple of words about yourself"
+          organization: "Organization"
+          password: "Password"
+          password_confirmation: "Password confirmation"
+        edit:
+          action: "Edit profile"
+          current_password: "Current password"
+          leave_blank_hint: "Leave it blank if you don't want to change it"
+          current_password_hint: "We need your current password to confirm your changes"
+          update: "Update"
+          cancel_account: "Cancel my account"
+          unhappy: "Unhappy?"
+          cancel_confirm: "Are you sure?"
+          waiting_for_confirm: "Currently waiting confirmation for"
+      shared_links:
+        login: "Log in"
+        sign_up: "Sign up"
+        forgot_password: "Forgot your password?"
+        no_confirmation_instructions: "Didn't receive confirmation instructions?"
+        no_unlock_instructions: "Didn't receive unlick instructions?"
+        omniauth_sign_in: "Sign in with"
+      confirmations:
+        action: "Resend confirmation instructions"
+        placeholders:
+          email: "Email"
+      invitations:
+        edit:
+          action: "Create Account"
+      mailer:
+        confirmation:
+          action: "Confirm my account"
+          welcome: "Welcome"
+          you_can_confirm: "You can confirm your account email through the link below"
+        password_change:
+          hello: "Hello"
+          message: "We're contacting you to notify you that your password has been changed."
+        reset_password:
+          action: "Change my password"
+          hello: "Hello"
+          message: "Someone has requested a link to change your password. You can do this through the link below."
+          no_link_no_change: "Your password won't change until you access the link above and create a new one."
+          did_not_request: "If you didn't request this, please ignore this email"
+        unlock:
+          action: "Unlock my account"
+          hello: "Hello"
+          message: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+          link: "Click the link below to unlock your account"
+      passwords:
+        action: "Change your password"
+        new: "New password"
+        confirm: "Confirm your new password"
+        forgot: "Forgot your password?"
+        send_reset: "Send me reset password instructions"
+      unlocks:
+        action: "Resend unlock instructions"
+  projects:
+    form:
+      placeholders:
+        project_name: "Project name"
+        project_link: "Project link"
+        description: "Description"
+        submit: "Create project"
+  team:
+    index:
+      edit_profile: "Edit Profile"
+      edit_team: "Edit Team"
+      edit_project: "Edit Project"
+      logout: "Logout"
+      your_team: "Your team"
+      team_members: "Team members"
+      pending: "Invitation pending"
+      you: "You"
+      invite_new: "Invite a new team member"
+      team_is_full: "Your team is full"
+      project: "Project"
+      create_new_project: "Create new project"
+      teams: "Teams"
+      create_team: "Create your own team"
+    form:
+      placeholders:
+        team_name: "Team name"
+        submit: "Create"
+    invite_form:
+      placeholders:
+        submit: "Invite"
+  home:
+    approvals:
+      mentors: "Mentors"
+      all_mentors: "All Mentors"
+      pending_mentors: "Mentors waiting approval"
+      table:
+        name: "Name"
+        email: "Email"
+        city: "City"
+        description: "Description"
+        organization: "Organization"
+        approved: "Approved"
+        edit: "Edit"
+    teams:
+      header: "Teams"
+      list: "This is the list of all teams"
+      table:
+        team: "Team"
+        project: "Project"
+        link: "Link"
+      modal:
+        close: "Close"
+  tooltips:
+    team_created: "Team was successfully created"
+    team_updated: "Team info updated"
+    project_created: "Project was successfully created"
+    project_updated: "Project info updated"
+
 

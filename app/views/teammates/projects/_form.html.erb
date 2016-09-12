@@ -1,7 +1,7 @@
 <%= simple_form_for(@project) do |f| %>
     <%= f.error_notification %>
-    <%= f.input :name, required: true, label: false, placeholder: 'Project name', input_html: { class: 'form-control' } %>
-    <%= f.input :link, required: true, label: false, placeholder: 'Project link', input_html: { class: 'form-control' } %>
-    <%= f.input :description, required: true, label: false, placeholder: 'Description', input_html: { class: 'form-control' } %>
-    <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+    <%= f.input :name, required: true, label: false, placeholder: t('projects.form.placeholders.project_name'), input_html: { class: 'form-control' } %>
+    <%= f.input :link, required: true, label: false, placeholder: t('projects.form.placeholders.project_link'), input_html: { class: 'form-control' } %>
+    <%= f.input :description, required: true, label: false, placeholder: t('projects.form.placeholders.description'), input_html: { class: 'form-control' } %>
+    <%= f.button :submit, t('projects.form.placeholders.submit'), class: 'btn btn-primary btn-block' %>
 <% end %>

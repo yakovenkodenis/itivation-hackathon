@@ -2,16 +2,40 @@
 
 <div class="col-md-6 col-md-offset-3 panel panel-default">
     <div class="panel-body">
-        <h2>Create Account</h2>
+        <h2><%= t('authentication.teammate.invitations.edit.action') %></h2>
 
         <%= simple_form_for resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put } do |f| %>
           <%= devise_error_messages! %>
           <%= f.hidden_field :invitation_token %>
 
-          <%= f.input :name %>
-          <%= f.input :city %>
-          <%= f.input :password %>
-          <%= f.input :password_confirmation %>
+          <%= f.input :name, label: t('authentication.teammate.sign_up.placeholders.name') %>
+          <%= f.input :city, label: t('authentication.teammate.sign_up.placeholders.city') %>
+          <%= f.input :avatar, as: :file %>
+          <%= f.input :occupation, required: false,
+            label: t('authentication.teammate.sign_up.placeholders.occupation'),
+            collection: [
+              t('authentication.teammate.sign_up.select.occupation.studying'),
+              t('authentication.teammate.sign_up.select.occupation.working'),
+              t('authentication.teammate.sign_up.select.occupation.studying_and_working'),
+              t('authentication.teammate.sign_up.select.occupation.freelance')
+            ]
+          %>
+          <%= f.input :team_role, required: true,
+            label: t('authentication.teammate.sign_up.placeholders.team_role'),
+            collection: [
+              t('authentication.teammate.sign_up.select.team_role.designer'),
+              t('authentication.teammate.sign_up.select.team_role.backend'),
+              t('authentication.teammate.sign_up.select.team_role.frontend'),
+              t('authentication.teammate.sign_up.select.team_role.manager'),
+              t('authentication.teammate.sign_up.select.team_role.other')
+            ]
+          %>
+          <%= f.input :password,
+            label: t('authentication.teammate.sign_up.placeholders.password')
+          %>
+          <%= f.input :password_confirmation,
+            label: t('authentication.teammate.sign_up.placeholders.password_confirmation')
+          %>
 
           <%= f.button :submit, t("devise.invitations.edit.submit_button") %>
         <% end %>

@@ -1,5 +1,5 @@
 <%= simple_form_for(@team) do |f| %>
     <%= f.error_notification %>
-    <%= f.input :name, required: true, label: false, placeholder: 'Team name', input_html: { class: 'form-control' } %>
-    <%= f.button :submit, class: 'btn btn-primary btn-block' %>
+    <%= f.input :name, required: true, label: false, placeholder: t('team.form.placeholders.team_name'), input_html: { class: 'form-control' } %>
+    <%= f.button :submit, t('team.form.placeholders.submit'), class: 'btn btn-primary btn-block' %>
 <% end %>

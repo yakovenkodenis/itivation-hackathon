@@ -1,38 +1,72 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <h2 style="padding-top: 15%;">Edit <%= resource_name.to_s.humanize %></h2>
+      <h2 style="padding-top: 15%;"><%= t('authentication.teammate.sign_up.edit.action') %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
        <div class="form-group">
           <%= f.error_notification %>
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :name, required: true %>
-          <%= f.input :city, required: true %>
-          <%= f.input :avatar, as: :file %>
-          <%= f.input :occupation, required: false, collection: ["Studying", "Working", "Studying & working", "Freelance"] %>
-          <%= f.input :team_role, required: true, collection: ["Designer", "Back-end dev", "Front-end dev", "Manager", "Other"] %>
+          <%= f.input :email, required: true, autofocus: true,
+            label: t('authentication.teammate.sign_up.edit.email')
+          %>
+          <%= f.input :name, required: true,
+            label: t('authentication.teammate.sign_up.placeholders.name')
+          %>
+          <%= f.input :city, required: true,
+            label: t('authentication.teammate.sign_up.placeholders.city')
+          %>
+          <%= f.input :avatar, as: :file, label: t('authentication.teammate.sign_up.placeholders.avatar') %>
+          <%= f.input :occupation, required: false,
+            label: t('authentication.teammate.sign_up.placeholders.occupation'),
+            collection: [
+              t('authentication.teammate.sign_up.select.occupation.studying'),
+              t('authentication.teammate.sign_up.select.occupation.working'),
+              t('authentication.teammate.sign_up.select.occupation.studying_and_working'),
+              t('authentication.teammate.sign_up.select.occupation.freelance')
+            ]
+          %>
+          <%= f.input :team_role, required: true,
+            label: t('authentication.teammate.sign_up.placeholders.team_role'),
+            collection: [
+              t('authentication.teammate.sign_up.select.team_role.designer'),
+              t('authentication.teammate.sign_up.select.team_role.backend'),
+              t('authentication.teammate.sign_up.select.team_role.frontend'),
+              t('authentication.teammate.sign_up.select.team_role.manager'),
+              t('authentication.teammate.sign_up.select.team_role.other')
+            ]
+          %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <p><%= t('authentication.teammate.sign_up.edit.waiting_for_confirm') %>: <%= resource.unconfirmed_email %></p>
           <% end %>
 
-          <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-          <%= f.input :password_confirmation, required: false %>
-          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+          <%= f.input :password, autocomplete: "off",
+            hint: t('authentication.teammate.sign_up.edit.leave_blank_hint'), required: false,
+            label: t('authentication.teammate.sign_up.placeholders.password')
+          %>
+          <%= f.input :password_confirmation, required: false,
+            label: t('authentication.teammate.sign_up.placeholders.password_confirmation')
+          %>
+          <%= f.input :current_password,
+            hint: t('authentication.teammate.sign_up.edit.current_password_hint'), required: true,
+            label: t('authentication.teammate.sign_up.edit.current_password')
+          %>
         </div>
 
         <div class="form-group">
-          <%= f.button :submit, "Update" %>
+          <%= f.button :submit, t('authentication.teammate.sign_up.edit.update') %>
         </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
+      <h3><%= t('authentication.teammate.sign_up.edit.cancel_account') %></h3>
 
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p>
+        <%= t('authentication.teammate.sign_up.edit.unhappy') %> <%= link_to t('authentication.teammate.sign_up.edit.cancel_account'), registration_path(resource_name),
+        data: { confirm: t('authentication.teammate.sign_up.edit.cancel_confirm') }, method: :delete %>
+      </p>
 
-      <%= link_to "Back", :back %>
+      <%= link_to t('back'), :back %>
     </div>
   </div>
 </div>

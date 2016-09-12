@@ -1,4 +1,5 @@
 ru:
+  back: "Назад"
   landing:
     sign_up_button: 'Принять участие'
     mentor_sign_up_button: 'Cтать ментором'
@@ -23,6 +24,221 @@ ru:
     footer:
       copyright: "Все права защищены"
       home: "Главная"
+  authentication:
+    teammate:
+      login:
+        action: "Вход"
+        min_password_hint: "символов - минимальная длина пароля"
+        placeholders:
+          email: "Email"
+          password: "Пароль"
+      sign_up:
+        action: "Регистрация"
+        placeholders:
+          name: "Имя"
+          email: "Email"
+          city: "Город"
+          avatar: "Аватар"
+          phone_number: "Номер телефона"
+          occupation: "Род занятий"
+          work_study_place: "Место работы/учёбы"
+          vk_link: "Ссылка на VK"
+          fb_link: "Ссылка на FB"
+          linkedin_link: "Ссылка на LinkedIn"
+          team_role: "Ваша роль в команде"
+          found_from: "Откуда Вы узнали про мероприятие?"
+          password: "Пароль"
+          password_confirmation: "Подтверждение пароля"
+        select:
+          occupation:
+            studying: "Учусь"
+            working: "Работаю"
+            studying_and_working: "Учусь & работаю"
+            freelance: "Фриланс"
+          team_role:
+            designer: "Дизайнер"
+            backend: "Back-end разработчик"
+            frontend: "Front-end разработчик"
+            manager: "Менеджер"
+            other: "Другое"
+        edit:
+          action: "Редактировать профиль"
+          current_password: "Текущий пароль"
+          leave_blank_hint: "Оставьте это поле пустым, если не хотите его менять"
+          current_password_hint: "Нам нужен Ваш текущий пароль для подтверждения изменений"
+          update: "Обновить"
+          cancel_account: "Отменить мой аккаунт"
+          unhappy: "Недовольны?"
+          cancel_confirm: "Вы уверены?"
+          waiting_for_confirm: "Ожидается подтверждение для"
+      shared_links:
+        login: "Вход"
+        sign_up: "Регистрация"
+        forgot_password: "Забыли пароль?"
+        no_confirmation_instructions: "Не получили инструкций для подтверждения аккаунта?"
+        no_unlock_instructions: "Не получили инструкций для разблокировки аккаунта?"
+        omniauth_sign_in: "Войти с помощью"
+      confirmations:
+        action: "Отправить инструкции по подтверждению аккаунта еще раз"
+        placeholders:
+          email: "Email"
+      invitations:
+        edit:
+          action: "Create Account"
+      mailer:
+        confirmation:
+          action: "Подтвердить мой аккаунт"
+          welcome: "Здравствуйте"
+          you_can_confirm: "Вы можете подтвердить Ваш аккаунт, перейдя по ссылке ниже"
+        password_change:
+          hello: "Здравствуйте"
+          message: "Уведомляем Вас, что Вам пароль был изменён."
+        reset_password:
+          action: "Изменить мой пароль"
+          hello: "Здравствуйте"
+          message: "Кто-то запросил ссылку на изменение Вашего пароля. Вы можете это сделать перейдя по ссылке ниже."
+          no_link_no_change: "Ваш пароль не будет изменён. пока Вы не перейдёте по ссылке и не создадите новый."
+          did_not_request: "Если Вы не запрашивали изменение пароля, пожалуйста, проигнорируйте это письмо."
+        unlock:
+          action: "Разблокировать мой аккаунт"
+          hello: "Здравствуйте"
+          message: "Ваш аккаунт был заблокирован по причине большого количества неудачных попыток входа."
+          link: "Перейдите по ссылке ниже, чтобы разблокировать аккаунт"
+      passwords:
+        action: "Изменить пароль"
+        new: "Новый пароль"
+        confirm: "Подтвердить новый пароль"
+        forgot: "Забыли пароль?"
+        send_reset: "Отправить мне инструкции по восстановлению пароля"
+      unlocks:
+        action: "Повторно отправить инструкции по разблокировке"
+    mentor:
+      login:
+        action: "Вход"
+        min_password_hint: "символов - минимальная длина пароля"
+        placeholders:
+          email: "Email"
+          password: "Пароль"
+      sign_up:
+        action: "Регистрация"
+        action2: "Стать ментором"
+        placeholders:
+          name: "Имя"
+          email: "Email"
+          city: "Город"
+          avatar: "Аватар"
+          description: "Несколько слов о себе"
+          organization: "Организация"
+          password: "Пароль"
+          password_confirmation: "Подтверждение пароля"
+        edit:
+          action: "Редактировать профиль"
+          current_password: "Текущий пароль"
+          leave_blank_hint: "Оставьте это поле пустым, если не хотите его менять"
+          current_password_hint: "Нам нужен Ваш текущий пароль для подтверждения изменений"
+          update: "Обновить"
+          cancel_account: "Отменить мой аккаунт"
+          unhappy: "Недовольны?"
+          cancel_confirm: "Вы уверены?"
+          waiting_for_confirm: "Ожидается подтверждение для"
+      shared_links:
+        login: "Вход"
+        sign_up: "Регистрация"
+        forgot_password: "Забыли пароль?"
+        no_confirmation_instructions: "Не получили инструкций для подтверждения аккаунта?"
+        no_unlock_instructions: "Не получили инструкций для разблокировки аккаунта?"
+        omniauth_sign_in: "Войти с помощью"
+      confirmations:
+        action: "Отправить инструкции по подтверждению аккаунта еще раз"
+        placeholders:
+          email: "Email"
+      invitations:
+        edit:
+          action: "Create Account"
+      mailer:
+        confirmation:
+          action: "Подтвердить мой аккаунт"
+          welcome: "Здравствуйте"
+          you_can_confirm: "Вы можете подтвердить Ваш аккаунт, перейдя по ссылке ниже"
+        password_change:
+          hello: "Здравствуйте"
+          message: "Уведомляем Вас, что Вам пароль был изменён."
+        reset_password:
+          action: "Изменить мой пароль"
+          hello: "Здравствуйте"
+          message: "Кто-то запросил ссылку на изменение Вашего пароля. Вы можете это сделать перейдя по ссылке ниже."
+          no_link_no_change: "Ваш пароль не будет изменён. пока Вы не перейдёте по ссылке и не создадите новый."
+          did_not_request: "Если Вы не запрашивали изменение пароля, пожалуйста, проигнорируйте это письмо."
+        unlock:
+          action: "Разблокировать мой аккаунт"
+          hello: "Здравствуйте"
+          message: "Ваш аккаунт был заблокирован по причине большого количества неудачных попыток входа."
+          link: "Перейдите по ссылке ниже, чтобы разблокировать аккаунт"
+      passwords:
+        action: "Изменить пароль"
+        new: "Новый пароль"
+        confirm: "Подтвердить новый пароль"
+        forgot: "Забыли пароль?"
+        send_reset: "Отправить мне инструкции по восстановлению пароля"
+      unlocks:
+        action: "Повторно отправить инструкции по разблокировке"
+  projects:
+    form:
+      placeholders:
+        project_name: "Название проекта"
+        project_link: "Ссылка на проект"
+        description: "Описание"
+        submit: "Создать"
+  team:
+    index:
+      edit_profile: "Редактировать профиль"
+      edit_team: "Редактировать команду"
+      edit_project: "Редактировать проект"
+      logout: "Выйти"
+      your_team: "Ваша команда"
+      team_members: "Члены команды"
+      pending: "Приглашение на рассмотрении"
+      you: "Вы"
+      invite_new: "Пригласить нового члена команды"
+      team_is_full: "Ваша команда заполнена"
+      project: "Проект"
+      create_new_project: "Создать проект"
+      teams: "Команды"
+      create_team: "Создать свою команду"
+    form:
+      placeholders:
+        team_name: "Название команды"
+        submit: "Создать"
+    invite_form:
+      placeholders:
+        submit: "Пригласить"
+  home:
+    approvals:
+      mentors: "Менторы"
+      all_mentors: "Все Менторы"
+      pending_mentors: "Менторы, ожидающие подтверждения"
+      table:
+        name: "Имя"
+        email: "Email"
+        city: "Город"
+        description: "Описание"
+        organization: "Организация"
+        approved: "Статус"
+        edit: "Редактировать"
+    teams:
+      header: "Команды"
+      list: "Список всех команд"
+      table:
+        team: "Команда"
+        project: "Проект"
+        link: "Ссылка"
+      modal:
+        close: "Закрыть"
+  tooltips:
+    team_created: "Команда успешно создана"
+    team_updated: "Данные о команде успешно обновлены"
+    project_created: "Проект успешно создан"
+    project_updated: "Данные о проекте успешно обновлены"
   activerecord:
     errors:
       models:

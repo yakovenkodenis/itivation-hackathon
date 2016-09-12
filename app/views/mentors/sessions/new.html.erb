@@ -1,21 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <h2 style="padding-top: 15%;">Log in</h2>
+      <h2 style="padding-top: 15%;"><%= t('authentication.mentor.login.action') %></h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <%= f.error_notification %>
             <div class="form-group">
                 <br>
-                <%= f.input :email, required: false, autofocus: true, label: false, placeholder: "Email", input_html: {class: "form-control"} %>
+                <%= f.input :email, required: true, label: false,
+                    placeholder: t('authentication.mentor.login.placeholders.email'),
+                    input_html: {class: "form-control"}
+                %>
                 <br>
-                <%= f.input :password, required: false, label: false, placeholder: "Password", input_html: {class: "form-control"} %>
-                <br>
-                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                <%= f.input :password, required: false, label: false,
+                  placeholder: t('authentication.mentor.login.placeholders.password'), input_html: {class: "form-control"}
+                %>
           </div>
 
           <div class="form-group">
-            <%= f.button :submit, "Log in", class: "btn btn-primary btn-block" %>
+            <%= f.button :submit, t('authentication.mentor.login.action'), class: "btn btn-primary btn-block" %>
           </div>
         <% end %>
 

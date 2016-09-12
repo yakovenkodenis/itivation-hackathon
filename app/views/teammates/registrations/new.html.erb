@@ -1,44 +1,64 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <h2 style="padding-top: 15%;">Sign up</h2>
+      <h2 style="padding-top: 15%;"><%= t('authentication.teammate.sign_up.action') %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
       <div class="form-group">
         <%= f.error_notification %>
-        <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Name", input_html: {class: "form-control"} %>
+        <%= f.input :name, required: true, autofocus: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.name'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :email, required: true, label: false, placeholder: "Email", input_html: {class: "form-control"} %>
+        <%= f.input :email, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.email'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :city, required: true, label: false, placeholder: "City", input_html: {class: "form-control"} %>
+        <%= f.input :city, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.city'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :avatar, as: :file, input_html: {class: "form-control"} %>
+        <%= f.input :avatar, as: :file,
+          label: t('authentication.teammate.sign_up.placeholders.avatar'),
+          input_html: {class: "form-control"}
+        %>
         <br>
-        <%= f.input :phone_number, required: true, label: false, placeholder: "Phone number", input_html: {class: "form-control"} %>
+        <%= f.input :phone_number, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.phone_number'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :occupation, required: true, label: "Occupation", placeholder: "Occupation", input_html: {class: "form-control"}, collection: ["Studying", "Working", "Studying & working", "Freelance"] %>
+        <%= f.input :occupation, required: true, label: t('authentication.teammate.sign_up.placeholders.occupation'), placeholder: t('authentication.teammate.sign_up.placeholders.occupation'), input_html: {class: "form-control"}, collection: [
+            t('authentication.teammate.sign_up.select.occupation.studying'),
+            t('authentication.teammate.sign_up.select.occupation.working'),
+            t('authentication.teammate.sign_up.select.occupation.studying_and_working'),
+            t('authentication.teammate.sign_up.select.occupation.freelance')
+          ]
+        %>
         <br>
-        <%= f.input :work_place, required: false, label: false, placeholder: "Work/study place", input_html: {class: "form-control"} %>
+        <%= f.input :work_place, required: false, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.work_study_place'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :vk, required: true, label: false, placeholder: "VK link", input_html: {class: "form-control"} %>
+        <%= f.input :vk, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.vk_link'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :facebook, required: true, label: false, placeholder: "FB link", input_html: {class: "form-control"} %>
+        <%= f.input :facebook, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.fb_link'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :linkedin, required: false, label: false, placeholder: "LinkedIn link", input_html: {class: "form-control"} %>
+        <%= f.input :linkedin, required: false, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.linkedin_link'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :team_role, required: true, label: "Your role in team:", placeholder: "Your role in team", input_html: {class: "form-control"}, collection: ["Designer", "Back-end dev", "Front-end dev", "Manager", "Other"] %>
+        <%= f.input :team_role, required: true,
+          label: t('authentication.teammate.sign_up.placeholders.team_role'),
+          placeholder: t('authentication.teammate.sign_up.placeholders.team_role'),
+          input_html: {class: "form-control"},
+          collection: [
+            t('authentication.teammate.sign_up.select.team_role.designer'),
+            t('authentication.teammate.sign_up.select.team_role.backend'),
+            t('authentication.teammate.sign_up.select.team_role.frontend'),
+            t('authentication.teammate.sign_up.select.team_role.manager'),
+            t('authentication.teammate.sign_up.select.team_role.other')
+          ]
+        %>
         <br>
-        <%= f.input :found_from, required: false, label: false, placeholder: "Where did you find out about the event?", input_html: {class: "form-control"} %>
+        <%= f.input :found_from, required: false, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.found_from'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), label: false, placeholder: "Password", input_html: {class: "form-control"} %>
+        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), label: false, placeholder: t('authentication.teammate.sign_up.placeholders.password'), input_html: {class: "form-control"} %>
         <br>
-        <%= f.input :password_confirmation, required: true, label: false, placeholder: "Password Confirmation", input_html: {class: "form-control"} %>
+        <%= f.input :password_confirmation, required: true, label: false, placeholder: t('authentication.teammate.sign_up.placeholders.password_confirmation'), input_html: {class: "form-control"} %>
         <br>
       </div>
 
       <div class="form-group">
-        <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block form-control" %>
+        <%= f.button :submit, t('authentication.teammate.sign_up.action'), class: "btn btn-primary btn-block form-control" %>
       </div>
       <% end %>
 

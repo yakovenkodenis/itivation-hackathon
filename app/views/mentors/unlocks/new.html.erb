@@ -1,7 +1,7 @@
 <div class="container" style='padding-top: 10%;'>
     <div class="row">
         <div class="col-md-6">
-            <h2>Resend unlock instructions</h2>
+            <h2><%= t('authentication.mentor.unlocks.action') %></h2>
 
             <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
               <%= f.error_notification %>
@@ -12,11 +12,11 @@
               </div>
 
               <div class="form-group">
-                <%= f.button :submit, "Resend unlock instructions", class: "btn btn-block" %>
+                <%= f.button :submit, t('authentication.mentor.unlocks.action'), class: "btn btn-block" %>
               </div>
             <% end %>
 
-            <%= render "mentors/shared/links" %>
+            <%= render "devise/shared/links" %>
         </div>
     </div>
 </div>

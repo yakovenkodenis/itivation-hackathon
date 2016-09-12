@@ -2,75 +2,75 @@
     <ul class="nav navbar-nav navbar-right">
         <% if teammate_signed_in? %>
             <li>
-                <%= link_to 'Edit Profile', edit_teammate_registration_path %>
+                <%= link_to t('team.index.edit_profile'), edit_teammate_registration_path %>
             </li>
             <% if @team %>
                 <li>
-                    <%= link_to 'Edit Team', edit_team_path(@team.id) %>
+                    <%= link_to t('team.index.edit_team'), edit_team_path(@team.id) %>
                 </li>
             <% end %>
             <% if @team && @team.projects.first %>
                 <li>
-                    <%= link_to 'Edit Project', edit_project_path(@team.projects.first.id) %>
+                    <%= link_to t('team.index.edit_project'), edit_project_path(@team.projects.first.id) %>
                 </li>
             <% end %>
             <li>
-                <%= link_to 'Logout', destroy_teammate_session_path, method: :delete %>
+                <%= link_to t('team.index.logout'), destroy_teammate_session_path, method: :delete %>
             </li>
         <% end %>
     </ul>
     <% if @team %>
         <div class="row-off">
             <div class="col-md-6">
-                <h3>Your team:</h3>
+                <h3><%= t('team.index.your_team') %>:</h3>
                 <h4><%= @team.name %></h4>
             </div>
             <div class="col-md-6">
-                <h3>Team members:</h3>
+                <h3><%= t('team.index.team_members') %>:</h3>
                 <ul>
                     <% @team.teammates.each do |t| %>
                         <% if t.name %>
                             <li>
                                 <% list_item = t.name + ' - ' + t.email %>
                                 <% if current_teammate.email == t.email %>
-                                    <% list_item = '(You) ' + list_item %>
+                                    <% list_item = "(#{t('team.index.you')}) " + list_item %>
                                 <% end %>
                                 <%= list_item %>
                             </li>
                         <% else %>
-                            <li>Invitation pending - <%= t.email %></li>
+                            <li><%= t('team.index.pending') %> - <%= t.email %></li>
                         <% end %>
                     <% end %>
                 </ul>
 
                 <% if @team.teammates.size < 3 %>
-                    <h3 class="extra-margin-top">Invite a new team member:</h3>
+                    <h3 class="extra-margin-top"><%= t('team.index.invite_new') %>:</h3>
                     <%= render 'invite_teammate_form' %>
                 <% else %>
-                    <p>Your team is full.</p>
+                    <p><%= t('team.index.team_is_full') %>.</p>
                 <% end %>
             </div>
         </div>
         <div class="row-off">
             <% if @team.projects.first and @team.projects.size > 0 %>
                 <% project = @team.projects.first %>
-                <h3>Project</h3>
+                <h3><%= t('team.index.project') %></h3>
                 <h4><%= project.name %></h4>
                 <%= markdown(project.description) %>
             <% else %>
-                <%= link_to 'Create new project', new_project_path %>
+                <%= link_to t('team.index.create_new_project'), new_project_path %>
             <% end %>
         </div>
 
     <% elsif @teams and @teams.size > 0 %>
-        <div>Teams:</div>
+        <div><%= t('team.index.teams') %>:</div>
         <ul>
             <% @teams.each do |team| %>
                 <li><%= team.name %></li>
             <% end %>
         </ul>
-        <%= link_to 'Create your own team', new_team_path %>
+        <%= link_to t('team.index.create_team'), new_team_path %>
     <% else %>
-        <%= link_to 'Create your own team', new_team_path %>
+        <%= link_to t('team.index.create_team'), new_team_path %>
     <% end %>
 </div>
