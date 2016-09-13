@@ -17,7 +17,7 @@ class Teammates::TeamController < ApplicationController
     respond_to do |format|
       if @team.save
         current_teammate.save!
-        format.html { redirect_to team_index_path, notice: I18n.t('tooltips.team_created') }
+        format.html { redirect_to root_path, notice: I18n.t('tooltips.team_created') }
       else
         format.html { render :new }
       end
@@ -30,7 +30,7 @@ class Teammates::TeamController < ApplicationController
   def update
     respond_to do |format|
       if @team.update(team_params)
-        format.html { redirect_to team_index_path, notice: I18n.t('tooltips.team_updated') }
+        format.html { redirect_to root_path, notice: I18n.t('tooltips.team_updated') }
       else
         format.html { render :edit }
       end
