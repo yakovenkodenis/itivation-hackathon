@@ -24,7 +24,7 @@ en:
   locale: "English"
   landing:
     sign_up_button: 'Participate'
-    sign_up_button2: "Sign Up"
+    sign_up_button2: "Participate"
     mentor_sign_up_button: 'Become a mentor'
     join_the_race: 'Join the race'
     title:
