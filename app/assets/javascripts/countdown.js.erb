@@ -15,7 +15,15 @@
         text_weeks = 'неделя';
       }
 
-      if (['2', '3', '4'].indexOf(weeks) >= 0) {
+      // if (['2', '3', '4'].indexOf(weeks) >= 0) {
+      //   text_weeks = 'недели';
+      // }
+
+      if (
+        ['2', '3', '4'].filter(
+          function(e) { return weeks.indexOf(e) !== -1; }
+        ).length > 0
+      ) {
         text_weeks = 'недели';
       }
 
@@ -23,7 +31,15 @@
         text_days = 'день'
       }
 
-      if (['2', '3', '4'].indexOf(days) >= 0) {
+      // if (['2', '3', '4'].indexOf(days) >= 0) {
+      //   text_days = 'дня';
+      // }
+
+      if (
+        ['2', '3', '4'].filter(
+          function(e) { return days.indexOf(e) !== 01; }
+        ).length > 0
+      ) {
         text_days = 'дня';
       }
 
