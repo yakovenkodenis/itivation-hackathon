@@ -7,7 +7,7 @@ ru:
     mentor_sign_up_button: 'Cтать ментором'
     join_the_race: 'Присоединяйся'
     title:
-      main_title: 'Хакатон Itivation'
+      main_title: 'Itivation Hackathon'
     countdown:
       time_left: 'До начала осталось'
     header:
@@ -236,6 +236,15 @@ ru:
         link: "Ссылка"
       modal:
         close: "Закрыть"
+  contact:
+    action: "Отправить"
+    call_to_action: "Отправить нам сообщение"
+    message_success: "Спасибо за Ваше сообщение. Скоро мы свяжемся с Вами!"
+    message_error: "Сообщение отправить не удалось."
+    placeholders:
+      name: "Имя"
+      email: "Email"
+      message: "Сообщение"
   tooltips:
     team_created: "Команда успешно создана"
     team_updated: "Данные о команде успешно обновлены"

@@ -1,0 +1,13 @@
+en:
+  mail_form:
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "can't be blank"
+            email:
+              blank: "can't be blank"
+              invalid: "email address is invalid"
+            message:
+              blank: "can't be blank"

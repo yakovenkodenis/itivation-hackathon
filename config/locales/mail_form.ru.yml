@@ -1,0 +1,13 @@
+ru:
+  mail_form:
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "это обязательное поле"
+            email:
+              blank: "это обязательное поле"
+              invalid: "неверный email"
+            message:
+              blank: "это обязательное поле"

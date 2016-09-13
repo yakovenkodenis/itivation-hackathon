@@ -32,6 +32,7 @@ gem 'auto_html', '~> 1.6'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
 gem 'simple_form'
+gem 'mail_form'
 
 gem 'paperclip', '~> 5.0.0'
 gem 'paperclip-i18n'

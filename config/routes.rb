@@ -42,8 +42,11 @@ Rails.application.routes.draw do
 
     get '/teams', to: 'home#teams'
     get '/mentors', to: 'home#mentors'
-    get '/contact', to: 'home#contact'
+    # get '/contact', to: 'home#contact'
+    get '/contact', to: 'contacts#new'
     get '/approvals', to: 'home#approvals'
+
+    resources :contacts, only: [:new, :create]
   end
 
   get '(:locale)', to: 'home#index'

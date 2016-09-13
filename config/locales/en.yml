@@ -257,6 +257,15 @@ en:
         link: "Link"
       modal:
         close: "Close"
+  contact:
+    action: "Send a message"
+    call_to_action: "Send a message to us"
+    message_success: "Thank you for your message. We will contact you soon!"
+    message_error: "Cannot send message."
+    placeholders:
+      name: "Name"
+      email: "Email"
+      message: "Message"
   tooltips:
     team_created: "Team was successfully created"
     team_updated: "Team info updated"
