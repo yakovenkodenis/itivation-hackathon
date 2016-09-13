@@ -55,22 +55,23 @@
                     </li>
                 <% end %>
 
-                <% if @allow_explicit_locales %>
-                    <li>
-                        <% if I18n.locale != I18n.default_locale %>
-                            <%= link_to 'English', url_for(locale: 'en') %>
-                        <% else %>
-                            <%= link_to 'Русский', url_for(locale: 'ru') %>
-                        <% end %>
-                    </li>
-                <% end %>
-
                 <li style='padding-top: 2.5%; padding-left: 5px;'>
                     <% if teammate_signed_in? %>
                         <%= link_to team_index_path, { class: 'no-padding' } do %>
                             <%= image_tag current_teammate.avatar.url(:thumb), class: 'img-small-round' %>
                         <% end %>
                     <% end %>
+                </li>
+
+                <li class="dropdown">
+                    <a id="langLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-target="#" style="">
+                        <%= t('locale') %>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="langLabel">
+                        <li><%= link_to 'English', url_for(locale: 'en') %></li>
+                        <li><%= link_to 'Русский', url_for(locale: 'ru') %></li>
+                    </ul>
                 </li>
             </ul>
         </div>

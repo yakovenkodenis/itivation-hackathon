@@ -171,6 +171,19 @@
                         <li>
                             <%= link_to t('landing.header.contact'), contact_path %>
                         </li>
+
+                        <li class="pull-right">
+                            <div class="dropdown">
+                                <a id="langLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-target="#">
+                                    <%= t('locale') %>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="langLabel">
+                                    <li><%= link_to 'English', url_for(locale: 'en') %></li>
+                                    <li><%= link_to 'Русский', url_for(locale: 'ru') %></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Itivation 2016. <%= t('landing.footer.copyright') %></p>
                 </div>

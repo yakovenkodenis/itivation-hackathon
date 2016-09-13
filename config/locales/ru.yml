@@ -1,5 +1,6 @@
 ru:
   back: "Назад"
+  locale: "Русский"
   landing:
     sign_up_button: 'Принять участие'
     mentor_sign_up_button: 'Cтать ментором'

@@ -21,6 +21,7 @@
 
 en:
   back: "Back"
+  locale: "English"
   landing:
     sign_up_button: 'Participate'
     mentor_sign_up_button: 'Become a mentor'
