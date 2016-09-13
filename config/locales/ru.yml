@@ -3,6 +3,7 @@ ru:
   locale: "Русский"
   landing:
     sign_up_button: 'Принять участие'
+    sign_up_button2: "Зарегистрироваться"
     mentor_sign_up_button: 'Cтать ментором'
     join_the_race: 'Присоединяйся'
     title:
@@ -19,9 +20,9 @@ ru:
       login: "Вход"
       sign_up: "Регистрация"
     mentors_block:
-      block_name: "Наши Менторы"
+      block_name: "Менторы"
     sponsors_block:
-      block_name: "Наши Спонсоры"
+      block_name: "Спонсоры"
     footer:
       copyright: "Все права защищены"
       home: "Главная"

@@ -24,6 +24,7 @@ en:
   locale: "English"
   landing:
     sign_up_button: 'Participate'
+    sign_up_button2: "Sign Up"
     mentor_sign_up_button: 'Become a mentor'
     join_the_race: 'Join the race'
     title:
@@ -40,9 +41,9 @@ en:
       login: "Login"
       sign_up: "Sign up"
     mentors_block:
-      block_name: "Our Mentors"
+      block_name: "Mentors"
     sponsors_block:
-      block_name: "Our Sponsors"
+      block_name: "Sponsors"
     footer:
       copyright: "All Rights Reserved"
       home: "Home"

@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- <a class="navbar-brand topnav" href="#">Itivation.</a> -->
-            <%= link_to 'Itivation.', root_path, class: 'navbar-brand topnav' %>
+            <%= link_to 'ITIVATION', root_path, class: 'navbar-brand topnav' %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,11 +44,11 @@
                         <%= link_to t('landing.header.login'), new_teammate_session_path %>
                     <% end %>
                 </li>
-                <% if !teammate_signed_in? && !mentor_signed_in? %>
-                    <li>
-                        <%= link_to t('landing.header.sign_up'), new_teammate_registration_path %>
-                    </li>
-                <% end %>
+                <%# if !teammate_signed_in? && !mentor_signed_in? %>
+                    <!-- <li> -->
+                        <%#= link_to t('landing.header.sign_up'), new_teammate_registration_path %>
+                    <!-- </li> -->
+                <%# end %>
                 <% if teammate_signed_in? && current_teammate.admin %>
                     <li>
                         <%= link_to t('landing.header.approvals'), approvals_path %>
