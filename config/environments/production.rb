@@ -98,5 +98,7 @@ Rails.application.configure do
     authentication: 'plain'
   }
 
-  config.action_mailer.default_url_options[:host] = ENV['ACTION_MAILER_HOST'] || 'localhost:3000'
+  config.action_mailer.default_url_options = {
+    host: ENV['ACTION_MAILER_HOST'] || 'localhost:3000'
+  }
 end
