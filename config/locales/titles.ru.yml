@@ -1,0 +1,10 @@
+en:
+  titles:
+    application: "ITIVATION"
+    teammates:
+      signup: "Регистрация"
+      login: "Вход"
+    team: "Моя Команда"
+    contact: "Контакты"
+    approvals: "Подтверждения"
+    teams: "Команды"

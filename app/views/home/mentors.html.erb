@@ -30,6 +30,8 @@
             <%= f.button :submit, t('authentication.mentor.sign_up.action'), class: "btn btn-primary btn-block form-control" %>
           </div>
         <% end %>
+        <%= link_to t('authentication.mentor.shared_links.login'), new_session_path(resource_name) %><br />
+        <%= link_to t('authentication.mentor.shared_links.no_unlock_instructions'), new_unlock_path(resource_name) %><br />
     </div>
   </div>
 </div>

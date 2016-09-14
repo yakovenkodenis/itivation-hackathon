@@ -2,13 +2,11 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'mentors#index'
-
     resources :mentors
     resources :teammates
     resources :events
     resources :projects
     resources :teams
-
   end
 
   scope '(:locale)', locale: /en|ru/ do
@@ -16,39 +14,37 @@ Rails.application.routes.draw do
     devise_for :teammates,
       controllers: {
         registrations: 'teammates/registrations',
-        invitations: 'teammates/invitations'
+        invitations:   'teammates/invitations'
     }, path_names: {
-        sign_in: 'login',
+        sign_in:  'login',
         sign_out: 'logout',
-        sign_up: 'signup'
+        sign_up:  'signup'
     }
 
     devise_for :mentors,
       controllers: {
         registrations: 'mentors/registrations'
     }, path_names: {
-        sign_in: 'login',
+        sign_in:  'login',
         sign_out: 'logout',
-        sign_up: 'signup'
+        sign_up:  'signup'
     }
 
     authenticated :teammate do
       get '/', to: 'teammates/team#index'
-      resources :team, controller: 'teammates/team'
+      resources :team,     controller: 'teammates/team'
       resources :projects, controller: 'teammates/projects'
     end
 
-    authenticated :mentor do
-      get '/welcome', to: 'home#welcome_mentor'
-    end
 
     root 'home#index'
 
-    get '/teams', to: 'home#teams'
-    get '/mentors', to: 'home#mentors'
-    # get '/contact', to: 'home#contact'
-    get '/contact', to: 'contacts#new'
+    get '/welcome',   to: 'home#welcome_mentor'
+    get '/teams',     to: 'home#teams'
+    get '/mentors',   to: 'home#mentors'
     get '/approvals', to: 'home#approvals'
+
+    get '/contact', to: 'contacts#new'
 
     resources :contacts, only: [:new, :create]
   end
