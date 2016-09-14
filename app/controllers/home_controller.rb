@@ -14,6 +14,7 @@ class HomeController < ApplicationController
   end
 
   def mentors
+    redirect_to welcome_path if current_mentor
     @mentors = Mentor.all
   end
 

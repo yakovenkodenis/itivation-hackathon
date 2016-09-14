@@ -40,7 +40,7 @@
                 <li>
                     <% if teammate_signed_in? %>
                         <%= link_to t('landing.header.my_team'), team_index_path %>
-                    <% else %>
+                    <% elsif !mentor_signed_in? %>
                         <%= link_to t('landing.header.login'), new_teammate_session_path %>
                     <% end %>
                 </li>
