@@ -1,0 +1,31 @@
+.center-block {
+    padding-top: 10px;
+}
+
+.social {
+    padding: 5px 10px;
+
+    -webkit-transform: scale(.8);
+       -moz-transform: scale(.8);
+        -ms-transform: scale(.8);
+         -o-transform: scale(.8);
+            transform: scale(.8);
+
+    -webkit-transition-duration: .5s;
+       -moz-transition-duration: .5s;
+        -ms-transition-duration: .5s;
+         -o-transition-duration: .5s;
+            transition-duration: .5s;
+}
+
+#social-fb:hover {
+    color: #3b5998;
+}
+
+#social-tw:hover {
+    color: #4099ff;
+}
+
+#social-vk:hover {
+    color: #45668e;
+}
