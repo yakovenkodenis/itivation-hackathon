@@ -1,5 +1,30 @@
-<div class="container contact-form-container" style='padding-top: 10%;'>
+<div class="container welcome-mentor-container" style='padding-top: 10%;'>
     <div class="row">
-        <h2>You've signed up successfully. We'll contact you soon!</h2>
+        <h3 class="text-center">You've signed up successfully. We'll contact you soon!</h3>
+        <div class="well">
+            <h4>Here's your profile data:</h4>
+            <div class="row">
+                <div class="mentor-info-block">
+                    <div>
+                        Name: <%= current_mentor.name %>
+                    </div>
+                    <div>
+                        Email: <%= current_mentor.email %>
+                    </div>
+                    <div>
+                        City: <%= current_mentor.city %>
+                    </div>
+                    <div>
+                        Organization: <%= current_mentor.organization %>
+                    </div>
+                    <div>
+                        About me: <%= current_mentor.description %>
+                    </div>
+                </div>
+                <div class="mentor-avatar-block">
+                    <%= image_tag current_mentor.avatar.url, class: 'img-responsive img-thumbnail mentor-avatar-img' %>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

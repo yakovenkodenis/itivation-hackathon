@@ -27,6 +27,7 @@ class HomeController < ApplicationController
   end
 
   def welcome_mentor
+    redirect_to root_path if !current_mentor
   end
 
   def resource_name
