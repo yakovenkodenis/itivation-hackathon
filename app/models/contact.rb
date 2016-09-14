@@ -4,7 +4,7 @@ class Contact < MailForm::Base
   attribute :message,  validate: true
   attribute :nickname, captcha: true
 
-  append :remote_ip, :user_agent, :session
+  append :remote_ip, :user_agent
 
   def headers
     {
