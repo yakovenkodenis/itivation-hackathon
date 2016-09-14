@@ -38,6 +38,10 @@ Rails.application.routes.draw do
       resources :projects, controller: 'teammates/projects'
     end
 
+    authenticated :mentor do
+      get '/welcome', to: 'home#welcome_mentor'
+    end
+
     root 'home#index'
 
     get '/teams', to: 'home#teams'

@@ -25,6 +25,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def welcome_mentor
+  end
+
   def resource_name
     :mentor
   end
