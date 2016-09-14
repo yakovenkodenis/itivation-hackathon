@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
 
   def mentors
-    redirect_to welcome_path if current_mentor
+    redirect_to root_path if current_mentor
     @mentors = Mentor.all
   end
 
@@ -24,10 +24,6 @@ class HomeController < ApplicationController
     else
       @mentors = Mentor.all
     end
-  end
-
-  def welcome_mentor
-    # redirect_to root_path unless current_mentor
   end
 
   def resource_name

@@ -1,0 +1,20 @@
+<div class="container welcome-mentor-container" style='padding-top: 10%;'>
+
+    <ul class="nav navbar-nav navbar-right">
+        <% if mentor_signed_in? %>
+            <li>
+                <%= link_to t('mentor.index.edit_profile'), edit_mentor_registration_path %>
+            </li>
+            <li>
+                <%= link_to t('mentor.index.logout'), destroy_mentor_session_path, method: :delete %>
+            </li>
+        <% end %>
+    </ul>
+
+
+    <% if @mentor.approved %>
+        <%= render partial: 'approved_mentor', locals: { mentor: @mentor } %>
+    <% else %>
+        <%= render partial: 'unapproved_mentor', locals: { mentor: @mentor } %>
+    <% end %>
+</div>

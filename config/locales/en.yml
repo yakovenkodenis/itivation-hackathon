@@ -266,6 +266,10 @@ en:
       name: "Name"
       email: "Email"
       message: "Message"
+  mentor:
+    index:
+      edit_profile: "Edit Profile"
+      logout: "Log Out"
   tooltips:
     team_created: "Team was successfully created"
     team_updated: "Team info updated"

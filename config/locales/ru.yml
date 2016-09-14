@@ -245,6 +245,10 @@ ru:
       name: "Имя"
       email: "Email"
       message: "Сообщение"
+  mentor:
+    index:
+      edit_profile: "Редактировать профиль"
+      logout: "Выйти"
   tooltips:
     team_created: "Команда успешно создана"
     team_updated: "Данные о команде успешно обновлены"
