@@ -30,16 +30,18 @@ Rails.application.routes.draw do
         sign_up:  'signup'
     }
 
+    authenticated :mentor do
+      get '/', to: 'mentors/mentor#index'
+    end
+
     authenticated :teammate do
       get '/', to: 'teammates/team#index'
       resources :team,     controller: 'teammates/team'
       resources :projects, controller: 'teammates/projects'
     end
 
-
     root 'home#index'
 
-    get '/welcome',   to: 'home#welcome_mentor'
     get '/teams',     to: 'home#teams'
     get '/mentors',   to: 'home#mentors'
     get '/approvals', to: 'home#approvals'

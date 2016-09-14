@@ -1,0 +1,7 @@
+<div class="container welcome-mentor-container" style='padding-top: 10%;'>
+    <% if @mentor.approved %>
+        <%= render partial: 'approved_mentor', locals: { mentor: @mentor } %>
+    <% else %>
+        <%= render partial: 'unapproved_mentor', locals: { mentor: @mentor } %>
+    <% end %>
+</div>

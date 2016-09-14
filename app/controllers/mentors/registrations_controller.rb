@@ -6,27 +6,25 @@ class Mentors::RegistrationsController < Devise::RegistrationsController
 
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(
-      :sign_up, keys: [:name, :email, :password, :city,
-                       :avatar, :description, :organization,
-                       :approved]
+      :sign_up, keys: [:name, :email, :password,
+                       :city, :organization]
     )
   end
 
   def configure_account_update_params
     devise_parameter_sanitizer.permit(
       :sign_up, keys: [:name, :email, :password, :city,
-                       :avatar, :description, :organization,
-                       (:approved if current_teammate && current_teammate.admin)]
+                       :avatar, :description, :organization]
     )
   end
 
   def after_sign_up_path_for(resource)
-    welcome_path
+    root_path
   end
 
-  def after_inactive_sign_up_path_for(resource)
-    welcome_path
-  end
+  # def after_inactive_sign_up_path_for(resource)
+  #   root_path
+  # end
 
   def after_update_path_for(resource)
     root_path
