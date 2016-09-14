@@ -54,6 +54,6 @@ Rails.application.configure do
     port: 587,
     user_name: ENV['ACTION_MAILER_USERNAME'],
     password: ENV['ACTION_MAILER_PASSWORD'],
-    authentication: 'login'
+    authentication: 'plain'
   }
 end
